@@ -16,7 +16,7 @@ _Additional second layer contracts, such as the exchange proxy or individual sma
 
 ### Rewards
 
-The bounty program will pay out rewards according to the severity of a vulnerability. The final reward amount is at the sole discretion of Balancer Labs. See eligibility section below for more details.
+The bounty program will pay out rewards according to the severity of a vulnerability. The final reward amount is at the sole discretion of Yogi Studio. See eligibility section below for more details.
 
 <table>
   <thead>

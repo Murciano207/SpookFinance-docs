@@ -2,7 +2,7 @@
 
 ## Note about releases
 
-The **🍂Bronze Release🍂** is the first of 3 planned releases of the Balancer Protocol. Bronze emphasizes code clarity for audit and verification, and does not go to great lengths to optimize for gas.
+The **🍂Bronze Release🍂** is the first of 3 planned releases of the Yogi Protocol. Bronze emphasizes code clarity for audit and verification, and does not go to great lengths to optimize for gas.
 
 The **❄️Silver Release❄️** will bring many gas optimizations and architecture changes that will reduce transaction overhead and enable more flexible usage patterns.
 

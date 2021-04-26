@@ -16,7 +16,7 @@ The "price curve," which can be steeper or gentler based on the choice of consta
 
 The pool assets also have external market prices, so we can plot this "point" on the curve as well. If the external market prices diverge from the "internal" prices in either direction, these points will start to "move" away from each other along the curve. In response, arbitrageurs will buy or sell from the pool, trading against the market, changing the relative balances \(and therefore prices\), until the points converge again and balance is restored.
 
-Balancer is essentially a generalization of the constant product rule to pools containing two or more tokens. In addition, Balancer Pools assign relative weights to each token, to accommodate pools of tokens with significantly different valuations. The weights represent the proportion of each token in the total pool. This flexibility greatly expands the utility of these pools, and allows for many interesting strategies and use cases, as we shall see.
+Balancer is essentially a generalization of the constant product rule to pools containing two or more tokens. In addition, Yogi Pools assign relative weights to each token, to accommodate pools of tokens with significantly different valuations. The weights represent the proportion of each token in the total pool. This flexibility greatly expands the utility of these pools, and allows for many interesting strategies and use cases, as we shall see.
 
 ## Further Reading
 

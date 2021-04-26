@@ -40,7 +40,7 @@ The minimum balance of any token in a pool is 10^6 wei. **Important**: this is a
 
 **Min/Max Initial BPT Supply - \(100 / 1 Billion\)**
 
-Core Balancer Pools have a fixed initial token supply of 100 \(i.e., BPTs that represent shares of the pool's liquidity\). Smart Pools allow the pool creator to specify an initial supply within these bounds.
+Core Yogi Pools have a fixed initial token supply of 100 \(i.e., BPTs that represent shares of the pool's liquidity\). Smart Pools allow the pool creator to specify an initial supply within these bounds.
 
 ## V2 Limits
 

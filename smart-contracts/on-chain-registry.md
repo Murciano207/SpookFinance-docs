@@ -2,7 +2,7 @@
 
 ## Summary
 
-Stores a registry of Balancer Pool addresses for a given token address pair. Pools can be sorted in order of liquidity and queried via view functions. Used in combination with the [Exchange Proxy](exchange-proxy.md) swaps can be sourced and exectured entirely on-chain.
+Stores a registry of Yogi Pool addresses for a given token address pair. Pools can be sorted in order of liquidity and queried via view functions. Used in combination with the [Exchange Proxy](exchange-proxy.md) swaps can be sourced and exectured entirely on-chain.
 
 ## API
 

@@ -20,7 +20,7 @@ The next argument is PoolParams - this is where you define the structure and bas
 
 ```text
 struct PoolParams {
-    // Balancer Pool Token (representing shares of the pool)
+    // Yogi Pool Token (representing shares of the pool)
     string poolTokenSymbol;
     string poolTokenName;
     // Tokens inside the Pool
@@ -31,7 +31,7 @@ struct PoolParams {
 }
 ```
 
-Since the Balancer Pool Tokens are themselves ERC20 tokens, they have symbols and names. You can set both when creating your pool.
+Since the Yogi Pool Tokens are themselves ERC20 tokens, they have symbols and names. You can set both when creating your pool.
 
 The tokens must be addresses of conforming ERC20 tokens. Balances and weights are expressed in Wei - and the weights are denormalized, not percentages. Valid denormalized weights range from 1 to 49, since the maximum total denormalized weight is 50. \(This corresponds to a percentage range from 2% to 98%: 1/\(1+49\) = 2%; 49/\(1+49\) = 98%\)
 
@@ -62,7 +62,7 @@ Note that if you are whitelisting LPs, and intend for the whitelisted users to A
 
 At this point \(after calling newCRP\), we have a deployed Configurable Rights Object with all its permissions and parameters defined. But we can't do much with it - mainly because there is no Core Pool yet. We need to deploy a new Core Pool, with our Smart Pool as the controller, by calling createPool\(initialSupply\). \(There is also an overloaded version of createPool; more on that later.\) 
 
-We've already defined the tokens and balances we want the pool to hold. When we call createPool with a value for initialSupply, it will mint _initialSupply_ Balancer Pool Tokens \(BPTs\) and transfer them to the caller, simultaneously pulling the correct amount of collateral tokens into the contract. \(They end up in the Core Pool, passed through the CRP.\)
+We've already defined the tokens and balances we want the pool to hold. When we call createPool with a value for initialSupply, it will mint _initialSupply_ Yogi Pool Tokens \(BPTs\) and transfer them to the caller, simultaneously pulling the correct amount of collateral tokens into the contract. \(They end up in the Core Pool, passed through the CRP.\)
 
 To accomplish this, we need to allow the CRP to spend our collateral tokens, before calling createPool. For an example three-token pool, we might write:
 

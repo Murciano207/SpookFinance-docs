@@ -22,7 +22,7 @@ Once all tokens have been approved, the button will say "Create," and pressing i
 
 ### Shared Pool Creation
 
-* **shared pools** are open to anyone to join by adding liquidity and getting BPTs \(Balancer Pool Tokens\) in return, but all the pool parameters are immutable
+* **shared pools** are open to anyone to join by adding liquidity and getting BPTs \(Yogi Pool Tokens\) in return, but all the pool parameters are immutable
 * **private pools** only allow the owner to add liquidity to the pool, but all its parameters are flexible. So the owner of the private pool can change the swap fees, pause trades, add/remove tokens, change token weights, etc.
 
 A Balancer pool allows up to 8 tokens and the weights have to be between 2% and 98%. The swap fee can be between 0.0001% and 10%.

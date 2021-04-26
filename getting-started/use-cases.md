@@ -1,6 +1,6 @@
 # Use Cases
 
-There are two categories of users who can benefit from the Balancer Protocol: liquidity providers - who own Balancer Pools or participate in shared pools, and traders - who buy or sell the underlying pool assets on the open market.
+There are two categories of users who can benefit from the Yogi Protocol: liquidity providers - who own Yogi Pools or participate in shared pools, and traders - who buy or sell the underlying pool assets on the open market.
 
 Anyone can be a liquidity provider. For example:
 
@@ -13,5 +13,5 @@ There are three main categories:
 
 * "Retail" traders seeking to exchange tokens with low slippage at favorable rates
 * Arbitrageurs seeking profit through leveling market inefficiencies between DEXs or CEXs 
-* Ethereum smart contracts seeking liquidity for a variety of reasons, such as liquidating positions on other protocols, trading on behalf of users, etc. 
+* BSC smart contracts seeking liquidity for a variety of reasons, such as liquidating positions on other protocols, trading on behalf of users, etc. 
 

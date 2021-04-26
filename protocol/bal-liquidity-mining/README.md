@@ -6,7 +6,7 @@ To make the token distribution as fair as possible, we distribute BAL tokens pro
 
 Head over to [https://claim.balancer.finance/](https://claim.balancer.finance/) to claim your BAL from liquidity mining.
 
-In practice, every week Balancer Labs has to:
+In practice, every week Yogi Studio has to:
 
 * Define the starting and ending block of the week. Both are chosen as the block with the closest timestamp to a fixed weekly time \(e.g. Sunday 1:00pm UTC\). For example, the starting block for a given week might be \#10,100,000 and the ending block \#10,140,000.
 * Define snapshot blocks, every 256 blocks \(roughly hourly\) counting backwards from the ending block until the starting block. For the example above, the snapshot blocks would be \#10,140,000, \#10,139,744, \#10,139,488, and so on.

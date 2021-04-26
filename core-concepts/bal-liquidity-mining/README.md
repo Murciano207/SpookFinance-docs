@@ -14,7 +14,7 @@ Head over to [claim.balancer.finance](https://claim.balancer.finance/) Tuesday e
 * For smart pools created by other means, register to "redistribute" if you want BAL assigned automatically to token holders, or "redirect" to handle the distribution yourself
 * If smart pool tokens are held in a contract that cannot withdraw them \(e.g., a staking contract\), you can use redirect to assign their BAL to an account
 
-In practice, every week Balancer Labs has to:
+In practice, every week Yogi Studio has to:
 
 * Define the starting and ending block of the week. Both are chosen as the block with the closest timestamp to a fixed weekly time \(e.g. Sunday 1:00pm UTC\). For example, the starting block for a given week might be \#10,100,000 and the ending block \#10,140,000.
 * Define snapshot blocks, every 256 blocks \(roughly hourly\) counting backwards from the ending block until the starting block. For the example above, the snapshot blocks would be \#10,140,000, \#10,139,744, \#10,139,488, and so on.

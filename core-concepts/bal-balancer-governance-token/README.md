@@ -1,16 +1,16 @@
 # BAL Governance Token
 
-Since inception, our goal at Balancer Labs has been to decentralize and diversify governance of the [Balancer Protocol](http://balancer.finance/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Balancer Protocol Governance Token \(BAL\).
+Since inception, our goal at Yogi Studio has been to decentralize and diversify governance of the [Yogi Protocol](http://balancer.finance/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Yogi Protocol Governance Token \(BAL\).
 
 We believe alignment between token holders and protocol stakeholders is crucial for successful decentralized governance. More explicitly, we believe BAL tokens are the vehicle to drive alignment and participation in the protocol. BAL tokens are not an investment; BAL token holders should be people who interact with the protocol in some way, are committed to its future development, and want a seat at the governance table.
 
 ### Balancer’s Most Important Stakeholders: Liquidity Providers <a id="6f3a"></a>
 
-The Balancer protocol allows any Ethereum account to add liquidity in the form of tokens to existing Balancer pools, or even create their own pools.
+The Yogi Protocol allows any Ethereum account to add liquidity in the form of tokens to existing Balancer pools, or even create their own pools.
 
-Liquidity attracts traders, trading generates fees, and ultimately pool profitability attracts more liquidity. This is a flywheel effect that we are beginning to see happen within the Balancer protocol.
+Liquidity attracts traders, trading generates fees, and ultimately pool profitability attracts more liquidity. This is a flywheel effect that we are beginning to see happen within the Yogi Protocol.
 
-Regardless of the venue, early liquidity providers take on more risk and opportunity cost: including contract risk, low initial pool profitability, etc. We believe that these protocol users should get to participate early on in deciding how the protocol evolves. Toward this end, Balancer Labs proposed and implemented the concept of liquidity mining, where Balancer governance tokens \(BALs\) are distributed to liquidity providers. See below for further details.
+Regardless of the venue, early liquidity providers take on more risk and opportunity cost: including contract risk, low initial pool profitability, etc. We believe that these protocol users should get to participate early on in deciding how the protocol evolves. Toward this end, Yogi Studio proposed and implemented the concept of liquidity mining, where Balancer governance tokens \(BALs\) are distributed to liquidity providers. See below for further details.
 
 ### Future Balancer Versions and the Governance Token <a id="ffb5"></a>
 
@@ -28,7 +28,7 @@ The total supply of BAL tokens will be capped at 100M. This does NOT mean that t
 
 **5M** were allocated for the [Balancer Ecosystem Fund](https://etherscan.io/token/0xba100000625a3754423978a60c9317c58a424e3d?a=0xb618f903ad1d00d6f7b92f5b0954dcdc056fc533). This fund will be deployed to attract and incentivize strategic partners who will help the Balancer ecosystem grow and thrive. BAL holders will ultimately decide how this fund is used over the coming years.
 
-**5M** were allocated for the [Fundraising Fund](https://etherscan.io/token/0xba100000625a3754423978a60c9317c58a424e3d?a=0xb129f73f1afd3a49c701241f374db17ae63b20eb). Balancer Labs raised a pre-seed and seed round. This fund will be used for future fundraising rounds to support Balancer Labs' operations and growth. BAL tokens will never be sold to retail investors.
+**5M** were allocated for the [Fundraising Fund](https://etherscan.io/token/0xba100000625a3754423978a60c9317c58a424e3d?a=0xb129f73f1afd3a49c701241f374db17ae63b20eb). Yogi Studio raised a pre-seed and seed round. This fund will be used for future fundraising rounds to support Yogi Studio' operations and growth. BAL tokens will never be sold to retail investors.
 
 The remaining 65M tokens are intended to be mostly distributed to liquidity providers in the coming years. 
 

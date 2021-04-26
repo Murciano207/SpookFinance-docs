@@ -1,6 +1,6 @@
 # Exponentiation
 
-The main formulas used in Balancer protocol make use of a form of exponentiation where both the base and exponent are fixed-point \(non-integer\) values. Take for example the `swap` functions, where the weights in both the exponent and the base are fractions:
+The main formulas used in Yogi Protocol make use of a form of exponentiation where both the base and exponent are fixed-point \(non-integer\) values. Take for example the `swap` functions, where the weights in both the exponent and the base are fractions:
 
 $$
 A_o = \left(1 - \left(\frac{B_i}{B_i+A_i}\right)^{\frac{W_i}{W_o}}\right).B_o

@@ -18,7 +18,7 @@ As there are incremental gas costs associated with interacting with additional B
 
 ## How it works
 
-The fundamental optimization problem is to find the path through a set of Balancer Pools with the highest net yield after gas costs. The algorithm continues to add pools to the trading set, until there are no pools left where the net gain from trading with the pool would exceed the gas cost.
+The fundamental optimization problem is to find the path through a set of Yogi Pools with the highest net yield after gas costs. The algorithm continues to add pools to the trading set, until there are no pools left where the net gain from trading with the pool would exceed the gas cost.
 
 ### Linearization
 
@@ -55,7 +55,7 @@ The solution for trading an amount B + C can be found by interpolating the trade
 
 ## Development
 
-Balancer labs have developed the [SOR npm package](https://www.npmjs.com/package/@balancer-labs/sor), an easy to use implementation of the above concepts. For documentation for working with the package please see this [page](https://docs.balancer.finance/sor/development).
+Yogi Studio have developed the [SOR npm package](https://www.npmjs.com/package/@balancer-labs/sor), an easy to use implementation of the above concepts. For documentation for working with the package please see this [page](https://docs.balancer.finance/sor/development).
 
 
 

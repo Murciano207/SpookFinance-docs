@@ -20,7 +20,7 @@ Where:
 * GasPrice is used by the SOR as a factor to determine how many pools to swap against. i.e. higher cost means more costly to trade against lots of different pools. This value can be changed.
 * MaxPools is the max number of pools to split the trade across. Limit to a reasonable number given gas costs.
 * ChainId is the network chain ID \(i.e. 1=mainnet, 42=Kovan\)
-* PoolsUrl is a URL used to retrieve a JSON list of Balancer Pools to be considered. Balancer labs currently keeps an updated list at:
+* PoolsUrl is a URL used to retrieve a JSON list of Yogi Pools to be considered. Yogi Studio currently keeps an updated list at:
   * Mainnet: [https://ipfs.fleek.co/ipns/balancer-team-bucket.storage.fleek.co/balancer-exchange/pools](https://ipfs.fleek.co/ipns/balancer-team-bucket.storage.fleek.co/balancer-exchange/pools)​
   * Kovan: [https://ipfs.fleek.co/ipns/balancer-team-bucket.storage.fleek.co/balancer-exchange-kovan/pools](https://ipfs.fleek.co/ipns/balancer-team-bucket.storage.fleek.co/balancer-exchange-kovan/pools)
 
@@ -113,7 +113,7 @@ const tokenOut = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'; // WETH
 
 ## Example - SOR & ExchangeProxy
 
-Balancer labs makes use of a [ExchangeProxy contract](https://github.com/balancer-labs/balancer-registry) that allows users to batch execute swaps recommended by the SOR. The following example shows how SOR and ExchangeProxy can be used together to execute on-chain trades.
+Yogi Studio makes use of a [ExchangeProxy contract](https://github.com/balancer-labs/balancer-registry) that allows users to batch execute swaps recommended by the SOR. The following example shows how SOR and ExchangeProxy can be used together to execute on-chain trades.
 
 ```javascript
 require('dotenv').config();

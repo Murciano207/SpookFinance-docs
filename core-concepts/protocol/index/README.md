@@ -67,7 +67,7 @@ $$
 A_k = \left(1-\frac{P_{supply}-P_{redeemed}}{P_{supply}}\right) \cdot B_k
 $$
 
-All Balancer Protocol smart contracts were coded supporting a protocol-level exit fee to be charged that goes to Balancer Labs for supporting the development of the protocol. However, after careful consideration the Balancer Labs team decided to launch the first version of Balancer without any protocol fees whatsoever. \(For technical reasons, this is unlikely to change.\)
+All Yogi Protocol smart contracts were coded supporting a protocol-level exit fee to be charged that goes to Yogi Studio for supporting the development of the protocol. However, after careful consideration the Yogi Studio team decided to launch the first version of Balancer without any protocol fees whatsoever. \(For technical reasons, this is unlikely to change.\)
 
 ### Single-Asset Deposit / Withdrawal
 

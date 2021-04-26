@@ -10,6 +10,6 @@ We’re excited to see what you could build and to get you started here’s some
   * early LPs get more BPT per liquidity
   * LPs who withdraw later get more tokens per BPT.
 * Other smart pools that use Balancer’s customizable weights and fees in interesting ways
-* Balancer Pool DAO - BPT holders can vote on changing fees, etc
+* Yogi Pool DAO - BPT holders can vote on changing fees, etc
 * Arbitrage using flashloans
 
