@@ -2,11 +2,11 @@
 
 ## Liquidity Mining Estimates API
 
-Estimated BAL earned at each pool and by each liquidity provider can be retrieved via this API. Cumulative estimates for the week in progress are computed every hour, and the velocity with each BAL is accruing is computed from the difference between two consecutive estimates. Clients can then use the velocity to update the estimates retrieved from the API.
+Estimated YOGI earned at each pool and by each liquidity provider can be retrieved via this API. Cumulative estimates for the week in progress are computed every hour, and the velocity with each YOGI is accruing is computed from the difference between two consecutive estimates. Clients can then use the velocity to update the estimates retrieved from the API.
 
 ## Retrieving Pool Data
 
-These endpoints can be used to fetch the aggregate amount of BAL mined by all the liquidity providers of a pool or a set of pools.
+These endpoints can be used to fetch the aggregate amount of YOGI mined by all the liquidity providers of a pool or a set of pools.
 
 ### Single Pool
 
@@ -256,8 +256,8 @@ https://api.balancer.finance/liquidity-mining/v1/liquidity-providers/
 | current\_timestamp | The timestamp of when the request was received by the server |
 | snapshot\_timestamp | The last time the mining estimator script was executed and velocity was determined |
 | address | The address of the pool or the liquidity provider, depending on the endpoint used |
-| velocity | The estimated rate, in `BAL/second`, at which BAL was being mined by the address last time the estimator script was run |
-| current\_estimate | The estimated total BAL mined in the `week` up to time `current_timestamp` |
+| velocity | The estimated rate, in `YOGI/second`, at which YOGI was being mined by the address last time the estimator script was run |
+| current\_estimate | The estimated total YOGI mined in the `week` up to time `current_timestamp` |
 | week | The number of the week that the estimates refer to, `1` being the week between `Jun-01-2020 00:00:00` and `Jun-07-2020 23:59:59` |
 
 ## Client side updates

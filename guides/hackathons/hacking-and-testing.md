@@ -22,7 +22,7 @@ There are also apps for Pool Management and Token Exchanges. The source code for
 
 #### Mainnet
 
-[Exchange App](https://balancer.exchange/#/swap)
+[Exchange App](https://exchange.yogi.fi/#/swap)
 
 [Pool Management App](https://beta.pools.balancer.exchange/#/list)
 

@@ -31,17 +31,15 @@ Of course, Yogi has no control over the contracts of BEP20 tokens placed in Yogi
 
 ### What is the development roadmap?
 
-We are working on putting together a more detailed roadmap. The [bronze release](https://github.com/balancer-labs/balancer-core/releases/tag/v1.0.0) of V1 Yogi went live on February 26, 2020.
+We are working on putting together a more detailed roadmap. The of V1 Yogi went live on April 26th, 2021.
 
-The next step is V2 - set to launch in Q1 2021. It will be a quantum leap forward! We've vastly simplified the interfaces, rewritten the UI from scratch, improved gas efficiency and performance, and added significant new functionality.
+The next step is V2 - set to launch in Q2 2021. It will be a quantum leap forward! We've vastly simplified the interfaces, rewritten the UI from scratch, improved gas efficiency and performance, and added significant new functionality.
 
 Yogi V2 is an open, flexible, generalized AMM launch platform, achieved primarily through decoupling token storage and accounting from pool price computation logic. This allows projects to create new kinds of pools optimized for particular tokens or use cases, without changing the core protocol.
 
 V2 also supports Asset Managers - contracts that can remove tokens from the vault for yield farming, staking, voting, etc. - and flash loans.
 
 At launch, we will have two kinds of pools - Weighted pools similar to V1 \(but with up to 16 tokens, vs 8 tokens on V1\), and Stable pools, which have price logic designed for stablecoins or other pegged assets.
-
-See [this article](https://medium.com/balancer-protocol/balancer-v2-generalizing-amms-16343c4563ff) for further details.
 
 ### Does Yogi Protocol charge any fees at the protocol layer?
 
@@ -55,12 +53,14 @@ Not currently. A token will never be required to trade or interact with the prot
 
 ### Is there a Yogi Governance Token?
 
-Yes, Yogi Governance Token, [BAL](https://github.com/balancer-labs/docs/tree/1d12c9a19497529cf518328e06d801f8f1c89d7f/protocol/bal-balancer-governance-token/README.md), can be used to vote on proposals and steer the direction of the protocol. Every week 145,000 BALs, or approximately 7.5M per year, are distributed to liquidity providers. They are typically distributed directly to liquidity providers on Tuesdays at 2300 UTC.
+Yes, Yogi Governance Token, [YOGI](https://bscscan.com/address/0xa20FFbd8c1541E31145a9C8d34833fd4b2BC90e5), can be used to vote on proposals and steer the direction of the protocol. Every week 384,000 YOGIs, or approximately 20M per year, are distributed to liquidity providers. They are typically distributed directly to liquidity providers on Tuesdays at 2300 UTC.
 
-* 25M BAL tokens were initially allocated to founders, stock options, advisors and investors, all subject to vesting periods.
-* 5M were allocated for the Yogi Ecosystem Fund. This fund will be deployed to attract and incentivize strategic partners that will help the Yogi ecosystem grow and thrive. BAL holders will ultimately decide how this fund is used over the coming years.
-* 5M were allocated for the Fundraising Fund. Yogi Studio raised a pre-seed and seed round. This fund will be used for future fundraising rounds to support Yogi Studio operations and growth. BAL tokens will never be sold to retail investors.
-* The remaining 65M tokens are intended to be mostly distributed to liquidity providers in the coming years.
+* 20M YOGI tokens were initially allocated to founders, all subject to vesting periods.
+* 10M were allocated for the Yogi Ecosystem Fund. This fund will be deployed to attract and incentivize strategic partners that will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
+* 10M were allocated for community contributors to help create and raise awareness of Yogi.
+* 5M were allocated for the IDO of Yogi.
+* 5M were allocated for the Fundraising Fund. This fund will be used for future fundraising rounds to support Yogi Studio operations and growth. YOGI tokens will never be sold to retail investors.
+* The remaining 50M tokens are intended to be mostly distributed to liquidity providers in the coming years.
 
 ## Yogi Pools
 
@@ -68,7 +68,7 @@ Yes, Yogi Governance Token, [BAL](https://github.com/balancer-labs/docs/tree/1d1
 
 The fundamental building block of the Yogi Protocol is the Yogi Pool. Pools are smart contracts that implement the Yogi Protocol, and hold value in two or more BEP20 tokens.
 
-You can think of a Yogi Pool as an automated, market-making portfolio. Each token asset has an independent weight, and can be traded against any other token in the pool. For example, you could have a pool with three tokens in the following proportions 50% WETH, 25% MKR and 25% DAI.
+You can think of a Yogi Pool as an automated, market-making portfolio. Each token asset has an independent weight, and can be traded against any other token in the pool. For example, you could have a pool with three tokens in the following proportions 50% WBNB, 25% BTC and 25% BUSD.
 
 The value proposition of Yogi flows from two main features:
 
@@ -96,8 +96,6 @@ In contrast, Yogi Protocol lets rational market actors actively buy token A from
 
 So instead of doing work and _paying_ fees to rebalance their portfolio, Yogi Pool creators _earn_ fees while traders do the rebalancing work for them. Conversely, traders benefit in two ways - high liquidity allows low slippage on "retail trades," and arbitrageurs can directly profit from swings in external market prices.
 
-For further technical details, please refer to our [white paper](https://balancer.finance/whitepaper.html).
-
 ### How do Yogi Pools charge fees and how much are they?
 
 Yogi pools charge a percentage of the input amount traded for each trade. The fee goes entirely to the Yogi Pool liquidity providers. In V2, there is a small additional protocol fee, charged as a percentage of the pool's swap fee percentage \(which can be zero\).
@@ -108,13 +106,11 @@ V1 Core Yogi Pools can be controlled or finalized. Essentially, finalized pools 
 
 There are also various kinds of Smart Pools - Core Yogi Pools controlled by a smart contract. Yogi is designed to be easily extensible; the Core Concepts page referenced above has some suggestions for Smart Pool designs.
 
-Some Smart Pool concepts have already been implemented, and many more are in development. The first implementation was actually [PieDAO](https://piedao.org/) - they created a series of "++" tokens \(e.g., BTC++, USD++\): Yogi Pool tokens representing a basket of cryptocurrencies, chosen by the community through a DAO mechanism. Their smart pools control the underlying Yogi Pool, and implement features like value caps, pausing trading, etc.
+Some Smart Pool concepts have already been implemented, and many more are in development. The first implementation was actually [PieDAO](https://piedao.org/).
 
-Since Yogi Pool tokens are also compliant BEP20 tokens, they can also be composed into "meta" pools, which also exist \(e.g., [BTC++/USD++](https://pools.balancer.exchange/#/pool/0x7d2f4bcb767eb190aed0f10713fe4d9c07079ee8/)\).
+Since Yogi Pool tokens are also compliant BEP20 tokens, they can also be composed into "meta" pools.
 
 The home-grown "Configurable Rights" Smart Pool is less trustless than a Core Yogi Pool, since Smart Pool creators can \(by definition\) alter the parameters of a "live" Yogi Pool that allows public LPs. To mitigate this, CRP creators can choose exactly which parameters can be changed, at create time. As the name implies, this is done by granting the Smart Pool contract one or more "Rights" - the right to change one of the parameters. \(A CRP with no rights would be equivalent to a Core Yogi Pool.\)
-
-[Ampleforth](https://www.ampleforth.org/) is another example of a smart contract system. There is also plenty of innovation in the design of tokens. AMPL is an "Elastic Supply" token - instead of a fixed supply, like Bitcoin, and a volatile price -- AMPL is a kind of stable coin where the peg is maintained by adjusting the supply based on demand. These tokenomics can then interact with Yogi Pool settings in creative ways. This will not be supported on V2.
 
 ## Using Yogi Protocol
 
@@ -122,7 +118,7 @@ The home-grown "Configurable Rights" Smart Pool is less trustless than a Core Yo
 
 There are two ways a trader can interact with Yogi Protocol:
 
-* Through our [Exchange](https://balancer.exchange/#/swap) front-end
+* Through our [Exchange](https://exchange.yogi.fi/#/swap) front-end
 * Directly through our smart contracts on BSC 
 
 ### How can I use Yogi as a liquidity provider or portfolio manager?
@@ -132,15 +128,13 @@ There are two main ways a liquidity provider or portfolio manager can interact w
 * Through our [Pool Manager](https://pools.balancer.exchange/#/) front-end \(available shortly\)
 * Directly through our smart contracts on BSC 
 
-Please [contact us](mailto:contact@balancer.finance) if you have a portfolio worth more than 100,000 USD and need special assistance.
+### How can I claim YOGI tokens as a Liquidity Provider?
 
-### How can I claim BAL tokens as a Liquidity Provider?
+Head over to [https://claim.yogi.fi/](https://claim.yogi.fi/) to claim your YOGI from liquidity mining.
 
-Head over to [https://claim.balancer.finance/](https://claim.balancer.finance/) to claim your BAL from liquidity mining.
+YOGI tokens for liquidity mining of any given week will be available to be claimed the following Tuesday evening \(EST time\).
 
-BAL tokens for liquidity mining of any given week will be available to be claimed the following Tuesday evening \(EST time\).
-
-This claiming mechanism will allow you to choose if you want to claim on a weekly basis or accrue and claim at a later date. At this time, BAL earned through liquidity mining does not expire, so you can take your time to claim them. If for some reason this changes in the future, everyone will be notified well in advance.
+This claiming mechanism will allow you to choose if you want to claim on a weekly basis or accrue and claim at a later date. At this time, YOGI earned through liquidity mining does not expire, so you can take your time to claim them. If for some reason this changes in the future, everyone will be notified well in advance.
 
 ### Can Yogi be used as an Index Fund?
 
@@ -158,9 +152,9 @@ Yogi Protocol smart contracts have been designed with security as a top priority
 
 Yogi Pools are not [upgradeable](https://medium.com/consensys-diligence/upgradeability-is-a-bug-dba0203152ce) \(though other third-party Smart Pool implementations might be\), and there are no admin keys or backdoors. 
 
-Remember that the tokens held in Yogi Pools are also smart contracts - not controlled by Yogi - and may have their own risks. Yogi does not support non-ERC20-conforming tokens, but pools may have been created that use them anyway.
+Remember that the tokens held in Yogi Pools are also smart contracts - not controlled by Yogi - and may have their own risks. Yogi does not support non-BEP20-conforming tokens, but pools may have been created that use them anyway.
 
-The CRP contains safeguards to prevent categories of tokens with known issues from being used in pools \(e.g., non ERC20-conforming tokens, and tokens that disallow zero-transfers\), and further safeguards to allow other kinds of tokens to interact safely with the protocol \(e.g., tokens with callbacks, or those which require 0 prior spend approval\).
+The CRP contains safeguards to prevent categories of tokens with known issues from being used in pools \(e.g., non BEP20-conforming tokens, and tokens that disallow zero-transfers\), and further safeguards to allow other kinds of tokens to interact safely with the protocol \(e.g., tokens with callbacks, or those which require 0 prior spend approval\).
 
 Since Smart Pool operators can, by definition, alter the parameters of the pool during active trading, all require some level of trust in the pool creators \(beyond the general smart contract risk\) - the more parameters they can change, the more trust is required.
 

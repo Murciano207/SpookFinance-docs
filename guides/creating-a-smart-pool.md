@@ -12,7 +12,7 @@ The proxy setup waits for 10 confirmations to be extra safe. Note that proxy con
 
 An interesting observation: we use the same DSProxy smart contracts as MakerDAO, so if you have an MCD vault already you won't need to create another proxy!
 
-There is only one "action" button. If you have already set up a proxy with this address, the system will skip the setup step and next check to see if you have "approved" the proxy for the tokens you want to transfer. If not, the button will say "Unlock &lt;token name&gt;" for each token. If you just created the proxy, it will prompt you to unlock each token \(BAL, then WETH for the sample pool shown above\), requiring you to send a transaction to approve each token.
+There is only one "action" button. If you have already set up a proxy with this address, the system will skip the setup step and next check to see if you have "approved" the proxy for the tokens you want to transfer. If not, the button will say "Unlock &lt;token name&gt;" for each token. If you just created the proxy, it will prompt you to unlock each token \(YOGI, then WETH for the sample pool shown above\), requiring you to send a transaction to approve each token.
 
 Once all tokens have been approved, the button will say "Create," and pressing it will create the transaction to deploy and fund the pool.
 
