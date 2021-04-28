@@ -6,9 +6,9 @@ If a pool is still private \(i.e. not finalized\), you can withdraw liquidity by
 
 ![](https://lh5.googleusercontent.com/epkR6-l5a2awnjvRAjNtBkFqE2rjHe7gfZ5fo2BH0l1uj87IA3fN2n6mfhZEtIJ-VbrtHEhosjgo35k7sdEMhJhZSbyVz0AWeEoNCFn-YPG4fSRHtTznRaYSEGXQ_OM0KlsGOggo)
 
-In case we’re dealing with a shared pool, things look a bit different. Once a pool is finalized, a BPT \(Yogi Pool Token\) associated with that pool is created with an initial supply of 100 units \(always with 18 decimals\). From that point on, ownership of the pool is tracked by BPT: holders are pro-rata owners of the pool’s liquidity.
+In case we’re dealing with a shared pool, things look a bit different. Once a pool is finalized, a YPT \(Yogi Pool Token\) associated with that pool is created with an initial supply of 100 units \(always with 18 decimals\). From that point on, ownership of the pool is tracked by YPT: holders are pro-rata owners of the pool’s liquidity.
 
-Just to illustrate, this is how a BPT distribution looks like for the more popular “75-MKR / 25-WETH” pool:
+Just to illustrate, this is how a YPT distribution looks like for the more popular “75-MKR / 25-WETH” pool:
 
 [https://etherscan.io/token/tokenholderchart/0x987D7Cc04652710b74Fff380403f5c02f82e290a](https://etherscan.io/token/tokenholderchart/0x987D7Cc04652710b74Fff380403f5c02f82e290a)
 
@@ -30,10 +30,10 @@ So let’s use Etherscan to explore our [BTC++/DAI/USDC pool](https://etherscan.
 
 The function we’re looking for is called exitPool. The parameters expected are: 
 
-1. the amount of BPT \(in base units, so 1 is actually 10^18\) you’re giving back to the pool in exchange for the underlying tokens; and
+1. the amount of YPT \(in base units, so 1 is actually 10^18\) you’re giving back to the pool in exchange for the underlying tokens; and
 2. the minimum amount of each underlying token \(also in base units, separated by commas\) you expect to receive \(transaction fails if any minimum isn’t met\).
 
-To withdraw all your liquidity in one transaction, simply give back to the pool your full BPT balance \(in our case it’s a bit over 1184.12 BPT\). Remember all BPTs have 18 decimals. To accept any amount of underlying tokens, just set all minimum amounts to zero. Since we have 3 underlying tokens, minAmountsOut has 3 zeros: "0,0,0".
+To withdraw all your liquidity in one transaction, simply give back to the pool your full YPT balance \(in our case it’s a bit over 1184.12 YPT\). Remember all YPTs have 18 decimals. To accept any amount of underlying tokens, just set all minimum amounts to zero. Since we have 3 underlying tokens, minAmountsOut has 3 zeros: "0,0,0".
 
 ![](https://lh5.googleusercontent.com/T0sUcnFlu5-kXQmGbD2m8WAB5mgygcRblysrZVyGF1bTN4EYu9cW61GCSA0Sp2GTXC_gpThd1HejDGBMYar3flSdMcBYT8N55zNnqMOIwft32kn20aZykWD1zBW5JbqY3tKmhkO1)
 

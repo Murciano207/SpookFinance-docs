@@ -1,12 +1,12 @@
 # Limitations
 
-Balancer is meant to be a flexible and agnostic DeFi primitive. Due to constraints such as gas and math approximations, there are some limitations built into the protocol.
+Yogi is meant to be a flexible and agnostic DeFi primitive. Due to constraints such as gas and math approximations, there are some limitations built into the protocol.
 
 ## V1 Limits
 
-**ERC20 Tokens**
+**BEP20 Tokens**
 
-ERC20 compliance: pool tokens have to be ERC20 compliant. Bronze does not support ERC20 tokens that do not return `bools` for `transfer` and `transferFrom`. ****There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
+BEP20 compliance: pool tokens have to be BEP20 compliant. Bronze does not support BEP20 tokens that do not return `bools` for `transfer` and `transferFrom`. ****There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
 
 Tokens that have internal transfer fees or other non-standard balance updates may create arbitrage opportunities. Ex: DGX has both a demurrage and a transfer fee that will change a pool's balance compared to the internal accounting balance
 
@@ -38,23 +38,23 @@ This is to prevent malicious pool controllers from setting predatory trading fee
 
 The minimum balance of any token in a pool is 10^6 wei. **Important**: this is agnostic to token decimals and may cause issues for tokens with less than 6 decimals. Also note that this is only enforced on initial token binding. Future exits can potentially bring the pool below the minimum balance threshold and users should be aware of potential rounding errors.
 
-**Min/Max Initial BPT Supply - \(100 / 1 Billion\)**
+**Min/Max Initial YPT Supply - \(100 / 1 Billion\)**
 
-Core Yogi Pools have a fixed initial token supply of 100 \(i.e., BPTs that represent shares of the pool's liquidity\). Smart Pools allow the pool creator to specify an initial supply within these bounds.
+Core Yogi Pools have a fixed initial token supply of 100 \(i.e., YPTs that represent shares of the pool's liquidity\). Smart Pools allow the pool creator to specify an initial supply within these bounds.
 
 ## V2 Limits
 
 Note - these are current values, and may change until release.
 
-**ERC20 Tokens**
+**BEP20 Tokens**
 
-ERC20 compliance: pool tokens should generally be ERC20 compliant, though it is more flexible than V1 in some areas \(e.g., it does not check for `bools` for `transfer` and `transferFrom`**\).** There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
+BEP20 compliance: pool tokens should generally be BEP20 compliant, though it is more flexible than V1 in some areas \(e.g., it does not check for `bools` for `transfer` and `transferFrom`**\).** There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
 
 Tokens that have internal transfer fees or other non-standard balance updates may create unexpected arbitrage opportunities. Ex: DGX has both a demurrage and a transfer fee that will change a pool's balance compared to the internal accounting balance. These must be handled through special pool logic on V1, and are not supported on V2.
 
 **Minimum Bound Tokens - 2**
 
-Weighted and Stabe pools must contain at least two tokens. 
+Weighted and Stable pools must contain at least two tokens. 
 
 **Maximum Bound Tokens - 16**
 
@@ -74,9 +74,9 @@ This is to prevent malicious pool controllers from setting predatory trading fee
 
 **Minimum Balance - it's complicated**
 
-This is done differently in the V2 math. Balances can't be zero, but the mechanism keeping them non-zero is different - mainly burning a small amount of the initial BPT on creation.
+This is done differently in the V2 math. Balances can't be zero, but the mechanism keeping them non-zero is different - mainly burning a small amount of the initial YPT on creation.
 
-**Min/Max Initial BPT Supply - it's complicated**
+**Min/Max Initial YPT Supply - it's complicated**
 
 The initial supply is computed in the new V2 math, and is not passed in by the user. The protocol also burns an initial amount to prevent rounding/boundary issues.
 

@@ -1,6 +1,6 @@
 # YOGI - Balancer Governance Token
 
-Since inception, our goal at Yogi Studio has been to decentralize and diversify governance of the [Yogi Protocol](http://balancer.finance/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Yogi Protocol Governance Token \(YOGI\).
+Since inception, our goal at Yogi Studio has been to decentralize and diversify governance of the [Yogi Protocol](https://yogi.fi/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Yogi Protocol Governance Token \(YOGI\).
 
 We believe alignment between token holders and protocol stakeholders is crucial for successful decentralized governance. More explicitly, we believe YOGI tokens are the vehicle to drive alignment and participation in the protocol. YOGI tokens are not an investment; YOGI token holders should be people who interact with the protocol in some way, are committed to its future development, and want a seat at the governance table.
 

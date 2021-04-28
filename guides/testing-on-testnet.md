@@ -158,7 +158,7 @@ We have a valid pool with 3 bound tokens and a swap fee of 0.3%. At this point, 
 
 A private pool allows the owner to continually adjust tokens, balances, weights, and fees - but prevents anyone else from adding or removing liquidity to that pool. After all, it wouldn't be fair if the owner changed weights after other users contributed liquidity! A shared pool is created when the `finalize` function is called - and this is a one-way transition. This locks all of the tokens, balances, weights, and opens the pool to outside users to add and remove liquidity.
 
-For our example, we want other users to be able to add liquidity, so let's finalize it. 100 Yogi Pool Tokens will be minted as part of the pool finalization regardless of the bound token balances. Yogi Pool Tokens, or BPTs, represent proportional ownership of a pools liquidity. Any future joins or exits are calculated based on the relative liquidity being added.
+For our example, we want other users to be able to add liquidity, so let's finalize it. 100 Yogi Pool Tokens will be minted as part of the pool finalization regardless of the bound token balances. Yogi Pool Tokens, or YPTs, represent proportional ownership of a pools liquidity. Any future joins or exits are calculated based on the relative liquidity being added.
 
 ```text
 seth send $BPOOL "finalize()"
@@ -166,7 +166,7 @@ seth send $BPOOL "finalize()"
 
 All done, now anyone can add liquidity and swap against the assets in the pool!
 
-Let's confirm that we received BPTs by calling `balanceOf` directly on the pool address \(since the pools themselves are ERC20 tokens\)
+Let's confirm that we received YPTs by calling `balanceOf` directly on the pool address \(since the pools themselves are ERC20 tokens\)
 
 ```text
 seth --from-wei $(seth --to-dec $(seth call $BPOOL "balanceOf(address)" $ETH_FROM))

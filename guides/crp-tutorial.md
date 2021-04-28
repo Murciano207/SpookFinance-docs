@@ -58,7 +58,7 @@ struct Rights {
 
  At this point \(after calling newCRP\), we have a deployed Configurable Rights Object with all its permissions and parameters defined. But we can't do much with it - mainly because there is no Core Pool yet. We need to deploy a new Core Pool, with our Smart Pool as the controller, by calling createPool\(initialSupply\). \(There is also an overloaded version of createPool; more on that later.\) 
 
-We've already defined the tokens and balances we want the pool to hold. When we call createPool with a value for initialSupply, it will mint _initialSupply_ Yogi Pool Tokens \(BPTs\) and transfer them to the caller, simultaneously pulling the correct amount of collateral tokens into the contract. \(They end up in the Core Pool, passed through the CRP.\)
+We've already defined the tokens and balances we want the pool to hold. When we call createPool with a value for initialSupply, it will mint _initialSupply_ Yogi Pool Tokens \(YPTs\) and transfer them to the caller, simultaneously pulling the correct amount of collateral tokens into the contract. \(They end up in the Core Pool, passed through the CRP.\)
 
 To accomplish this, we need to allow the CRP to spend our collateral tokens, before calling createPool. For an example three-token pool, we might write:
 
@@ -71,7 +71,7 @@ await weth.approve(crpPool.address, MAX);
 await dai.approve(crpPool.address, MAX);
 await xyz.approve(crpPool.address, MAX);
 
-// consume the collateral; mint and xfer 100 BPTs to caller
+// consume the collateral; mint and xfer 100 YPTs to caller
 await crpPool.createPool(toWei('100'));
 ```
 

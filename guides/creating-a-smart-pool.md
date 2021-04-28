@@ -22,7 +22,7 @@ Smart pools are intermediate between **private** and **shared** pools \(describe
 
 These are called "Rights" \(hence the name "Configurable Rights Pool"\), and reserving a right allows the controller to alter the corresponding parameter.
 
-Select the "Smart" toggle to create a smart pool. Unlike with shared pools, you can set a custom token symbol and name; this will be the BPT \(pool token\), representing shares in the pool. Each pool **is** a token contract. You can also specifiy the initial supply of the token, which is arbitrary \(within the protocol limits of 100 - 1 billion\).
+Select the "Smart" toggle to create a smart pool. Unlike with shared pools, you can set a custom token symbol and name; this will be the YPT \(pool token\), representing shares in the pool. Each pool **is** a token contract. You can also specifiy the initial supply of the token, which is arbitrary \(within the protocol limits of 100 - 1 billion\).
 
 ![](../.gitbook/assets/smartcreate-1.png)
 
@@ -36,7 +36,7 @@ Creating a smart pool requires setting the "rights" the pool will have \(and ass
 * Can add/remove tokens - the controller can add a new token through a two-stage process that involves a timelock. The minimum "add token timelock" period is also specified on deployment. This is a "dangerous" right, since the controller could add a worthless token and drain the pool. \(Public LPs have the timelock period to withdraw if the controller is malicious.\)
 
   
-  The controller can also remove an existing token from the pool, which transfers the entire balance of that token to the controller. Note that the controller must burn BPTs \(pool tokens\) to do this, so if public LPs are allowed, the controller might not have enough BPT to actually do this. It is most commonly used to terminate LBPs.
+  The controller can also remove an existing token from the pool, which transfers the entire balance of that token to the controller. Note that the controller must burn YPTs \(pool tokens\) to do this, so if public LPs are allowed, the controller might not have enough YPT to actually do this. It is most commonly used to terminate LBPs.
 
 * Must whitelist LPs - no one can add liquidity to the pool after creation, unless their address is added to  whitelist. This is most commonly used for LBPs and Smart Treasuries.
 * Can change cap - this limits the total supply of pool tokens. It is set to the initial supply upon deployment, so no one can add liquidity unless the controller raises the cap. The controller can set the cap to "unlimited," which makes it behave like a shared pool, or 0 \(preventing new LPs altogether\), or any intermediate value.

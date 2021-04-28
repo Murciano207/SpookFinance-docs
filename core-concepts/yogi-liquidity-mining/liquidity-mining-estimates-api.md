@@ -13,7 +13,7 @@ These endpoints can be used to fetch the aggregate amount of YOGI mined by all t
 #### HTTP Request
 
 ```jsx
-GET https://api.balancer.finance/liquidity-mining/v1/pool/:address
+GET https://api.yogi.fi/liquidity-mining/v1/pool/:address
 ```
 
 #### URL Parameters
@@ -25,7 +25,7 @@ GET https://api.balancer.finance/liquidity-mining/v1/pool/:address
 #### Example Request
 
 ```jsx
-https://api.balancer.finance/liquidity-mining/v1/pool/0x1eff8af5d577060ba4ac8a29a13525bb0ee2a3d5
+https://api.yogi.fi/liquidity-mining/v1/pool/0x1eff8af5d577060ba4ac8a29a13525bb0ee2a3d5
 ```
 
 #### Example Response
@@ -60,7 +60,7 @@ https://api.balancer.finance/liquidity-mining/v1/pool/0x1eff8af5d577060ba4ac8a29
 #### HTTP Request
 
 ```jsx
-POST https://api.balancer.finance/liquidity-mining/v1/pools
+POST https://api.yogi.fi/liquidity-mining/v1/pools
 ```
 
 #### Body Parameters
@@ -72,7 +72,7 @@ POST https://api.balancer.finance/liquidity-mining/v1/pools
 #### Example Request
 
 ```jsx
-https://api.balancer.finance/liquidity-mining/v1/pools
+https://api.yogi.fi/liquidity-mining/v1/pools
 ```
 
 #### Example Body
@@ -134,7 +134,7 @@ https://api.balancer.finance/liquidity-mining/v1/pools
 #### HTTP Request
 
 ```jsx
-GET https://api.balancer.finance/liquidity-mining/v1/liquidity-provider/:address
+GET https://api.yogi.fi/liquidity-mining/v1/liquidity-provider/:address
 ```
 
 #### URL Parameters
@@ -146,7 +146,7 @@ GET https://api.balancer.finance/liquidity-mining/v1/liquidity-provider/:address
 #### Example Request
 
 ```jsx
-https://api.balancer.finance/liquidity-mining/v1/liquidity-provider/0xAfC2F2D803479A2AF3A72022D54cc0901a0ec0d6
+https://api.yogi.fi/liquidity-mining/v1/liquidity-provider/0xAfC2F2D803479A2AF3A72022D54cc0901a0ec0d6
 ```
 
 #### Example Response
@@ -181,7 +181,7 @@ https://api.balancer.finance/liquidity-mining/v1/liquidity-provider/0xAfC2F2D803
 #### HTTP Request
 
 ```jsx
-POST https://api.balancer.finance/liquidity-mining/v1/liquidity-providers/
+POST https://api.yogi.fi/liquidity-mining/v1/liquidity-providers/
 ```
 
 #### Body Parameters
@@ -193,7 +193,7 @@ POST https://api.balancer.finance/liquidity-mining/v1/liquidity-providers/
 #### Example Request
 
 ```jsx
-https://api.balancer.finance/liquidity-mining/v1/liquidity-providers/
+https://api.yogi.fi/liquidity-mining/v1/liquidity-providers/
 ```
 
 #### Example Body
