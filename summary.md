@@ -41,7 +41,6 @@
 
 ## API
 
-* [Migration to Version 1.0](api/migration-to-version-0.4.md)
 * [Events](api/core-contracts.md)
 * [API Index](api/api.md)
 * [UML Docs](api/uml-docs.md)
