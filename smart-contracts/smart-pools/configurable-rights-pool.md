@@ -4,7 +4,7 @@ The Balancer **Configurable Rights Pool** is the reference implementation of a s
 
 It is also designed to be easily extensible, and we showcase examples of Configurable Rights Pool extensions in [Smart Pool Templates](smart-pool-templates.md). These are projects with specific needs and custom logic, which need to override and alter core functionality.
 
-For example, the first template is [Ampleforth's](https://www.ampleforth.org/) Elastic Supply Pool, which features a different mechanism for updating weights, consistent with its daily rebase operation. We will add more templates as we discover further interesting use cases! \(If you have a suggestion, we'd love to hear from you on the smart-pool-dev channel on [Discord](https://discord.gg/qjFcczk).\)
+For example, the first template is [Ampleforth's](https://www.ampleforth.org/) Elastic Supply Pool, which features a different mechanism for updating weights, consistent with its daily rebase operation. We will add more templates as we discover further interesting use cases!
 
 You will find the addresses for deployed contracts on all networks [here](../addresses.md).
 

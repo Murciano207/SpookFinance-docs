@@ -13,7 +13,7 @@ There is no formal process for listing tokens on the Balancer exchange UI. That 
 
 The second kind of listing is eligibility for YOGI rewards. New tokens are listed \(and occasionally removed\) through a weekly governance process There is a streamlined process for simply listing a new token - tokens that meet a set of technical criteria below can be approved without requiring community vote. Only increasing the cap, introducing "controversial" or non-conforming tokens, or adjusting the reward process or its parameters requires a vote.
 
-To request approving your token for YOGI rewards, just post to \#token-requests on the [Discord](https://discord.gg/ARJWaeF) channel. Each weekly reward period begins at 00:00 UTC on Monday; any requests approved after then will take effect the following week.
+To request approving your token for YOGI rewards, just post to \#token-requests on the [Discord](https://discord.gg/VbDahbKd2e) channel. Each weekly reward period begins at 00:00 UTC on Monday; any requests approved after then will take effect the following week.
 
 The listing criteria below are taken from this [accepted proposal](https://forum.balancer.finance/t/proposal-to-update-the-whitelist-process/217/4). \(We will endeavor to keep this up-to-date, but see the [Balancer Forum](https://forum.balancer.finance/) for the very latest.\)
 

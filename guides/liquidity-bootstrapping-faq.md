@@ -2,11 +2,11 @@
 
 ### How do I launch a Liquidity Bootstrapping Pool?
 
-Decide on critical parameters, such as sale duration, starting and ending weights, and estimate the demand \(i.e., expected sale rate\), using the [LBP simulator](https://docs.google.com/spreadsheets/d/1t6VsMJF8lh4xuH_rfPNdT5DM3nY4orF9KFOj2HdMmuY/edit?usp=sharing) to adjust the settings until you are happy with the resulting price curve. \(Best practice is to copy/download it, then customize to your own use case.\)
+Decide on critical parameters, such as sale duration, starting and ending weights, and estimate the demand \(i.e., expected sale rate\), using the [LBP simulator](https://docs.google.com/spreadsheets/d/1naQDt7BFCNtfdd2wUYm6Z3ENgZEI-5sdUud3eOkHYnQ/edit?usp=sharing) to adjust the settings until you are happy with the resulting price curve. \(Best practice is to copy/download it, then customize to your own use case.\)
 
-Post on [\#token-requests](https://discord.gg/ARJWaeF) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended, and YOGI rewards require an active CoinGecko price feed.\)
+Post on [\#token-requests](https://discord.gg/VbDahbKd2e) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended, and YOGI rewards require an active CoinGecko price feed.\)
 
-If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. However, to receive YOGI rewards yourself, you must redirect them from the smart pool contract to a wallet that can receive them - otherwise they will be locked in the contract and lost. This is done through a pull request to update [this file](https://github.com/balancer-labs/bal-mining-scripts/blob/master/redirect.json) in the mining repository. 
+If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. However, to receive YOGI rewards yourself, you must inform the Yogi team and share a EOA wallet for you to receive the distribtion. 
 
 ### How long should an LBP last?
 
@@ -42,7 +42,7 @@ In contrast, if your upfront capital is 1M USDC, you’d be able to sell around 
 
 ### How can I calculate different scenarios for the amount of tokens to sell, based on the amount of seed capital and pool weights?
 
-You can use our [LBP simulator](https://docs.google.com/spreadsheets/d/1t6VsMJF8lh4xuH_rfPNdT5DM3nY4orF9KFOj2HdMmuY/edit?usp=sharing) to plug in your variables and see the projected results. \(Best practice is to copy it so you have your own version, or even download to Excel.\)
+You can use our [LBP simulator](https://docs.google.com/spreadsheets/d/1naQDt7BFCNtfdd2wUYm6Z3ENgZEI-5sdUud3eOkHYnQ/edit?usp=sharing) to plug in your variables and see the projected results. \(Best practice is to copy it so you have your own version, or even download to Excel.\)
 
 There's a lot going on there, but a good place to start is the "ad hoc" simulator at the top right. There, you can type in balances, weights, and the swap fee, and see what the initial price would be. Then you can type your starting values into the main interface on the top left, and experiment with different ending weights and sale rates to come up with a reasonable price curve. It will also display the total proceeds and leftover tokens.
 

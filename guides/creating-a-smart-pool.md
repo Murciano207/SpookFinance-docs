@@ -2,9 +2,9 @@
 
 ## Setting up a proxy
 
-All the interactions to add liquidity or to create Balancer pools on our UIs happen through a proxy. This way our UI can simplify the UX by avoiding token approvals on every new pool the user interacts with.
+All the interactions to add liquidity or to create Yogi pools on our UIs happen through a proxy. This way our UI can simplify the UX by avoiding token approvals on every new pool the user interacts with.
 
-You'll be asked to setup a proxy when your address is interacting with our UI for the first time. For example, when you click on "Create a Pool" on our [pool management interface](https://pools.balancer.exchange/#/):
+You'll be asked to setup a proxy when your address is interacting with our UI for the first time. For example, when you click on "Create a Pool" on our [pool management interface](https://pools.yogi.fi/#/):
 
 ![](../.gitbook/assets/createproxy.png)
 
@@ -18,7 +18,7 @@ Once all tokens have been approved, the button will say "Create," and pressing i
 
 ### Smart Pool Creation
 
-Smart pools are intermediate between **private** and **shared** pools \(described in [Creating a Shared Pool\)](creating-a-balancer-pool.md). Unless restricted by policy \(more on that later\), smart pools allow public LPs, yet their parameters are not fixed. They can be changed by the controller \(usually the account that deployed the pool\) - but only in certain ways that are configured on deployment and thereafter immutable.
+Smart pools are intermediate between **private** and **shared** pools \(described in [Creating a Shared Pool\)](creating-a-yogi-pool.md). Unless restricted by policy \(more on that later\), smart pools allow public LPs, yet their parameters are not fixed. They can be changed by the controller \(usually the account that deployed the pool\) - but only in certain ways that are configured on deployment and thereafter immutable.
 
 These are called "Rights" \(hence the name "Configurable Rights Pool"\), and reserving a right allows the controller to alter the corresponding parameter.
 

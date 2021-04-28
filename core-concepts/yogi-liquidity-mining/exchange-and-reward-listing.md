@@ -15,7 +15,7 @@ There is no formal process for listing tokens on the Yogi exchange UI. That is u
 
 The second kind of listing is eligibility for YOGI earnings. New tokens are listed \(and occasionally removed\) through a weekly governance process There is a streamlined process for simply listing a new token - tokens that meet a set of technical criteria below can be approved without requiring community vote. Only increasing the cap, introducing "controversial" or non-conforming tokens, or adjusting the earnings process or its parameters requires a vote.
 
-To request approving your token for YOGI earnings, just post to \#token-requests on the [Discord](https://discord.gg/tjJ8eztWEp) channel. Each weekly earnings period begins at 00:00 UTC on Monday; any requests approved after then will take effect the following week.
+To request approving your token for YOGI earnings, just post to \#token-requests on the [Discord](https://discord.gg/VbDahbKd2e) channel. Each weekly earnings period begins at 00:00 UTC on Monday; any requests approved after then will take effect the following week.
 
 The listing criteria includes:
 

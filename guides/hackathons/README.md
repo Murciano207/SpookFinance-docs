@@ -6,14 +6,11 @@ This section provides resources and info for everyone who is hacking and buildin
 
 For an introduction and overview we recommend taking the time to read through the earlier sections of this documentation. You can find more technical information covering Smart Contracts and libraries in the later sections. Included below are some links to helpful info:
 
-* [Understanding Balancer](https://medium.com/@arnauramiomateu/understanding-balancer-protocol-frmo-0-to-100-998ba20c6834)
-* [Balancer Website](https://balancer.finance/)
-* [White Paper](https://balancer.finance/whitepaper/)
-* [Balancer Blog](https://medium.com/balancer-protocol)
-* [Building On Balancer Video Intro](https://www.youtube.com/watch?v=HTk_H4ERya8&feature=youtu.be)
-* [Building a Balancer app with Create Eth App](https://twitter.com/PaulRBerg/status/1329937745012252674)
-* [Github](https://github.com/balancer-labs)
-* [Twitter](https://twitter.com/BalancerLabs)
-* [FAQ](https://docs.balancer.finance/getting-started/faq)
-* [Our Discord](https://discord.gg/8wWewJt)
+* [Understanding Yogi](ttps://medium.com/yogi-fi)
+* [Yogi Website](https://yogi.fi/)
+* [Yogi Blog](https://medium.com/yogi-fi)252674)
+* [Github](https://github.com/yogi-fi)
+* [Twitter](https://twitter.com/yogi_finance)
+* [FAQ](https://docs.yogi.fi/getting-started/faq)
+* [Our Discord](https://discord.gg/tjJ8eztWEp)
 
