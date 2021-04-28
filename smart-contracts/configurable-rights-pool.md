@@ -1,6 +1,6 @@
 # Configurable Rights Pool
 
-The Balancer **Configurable Rights Pool** is the reference implementation of a smart contract-controlled Yogi Pool. It is flexible enough to be used directly to create customizable Smart Pools. Like the Core Pool \(BPool\), it is created from a factory - and as the name implies, its functionality can be customized to meet the needs of your project.
+The Yogi **Configurable Rights Pool** is the reference implementation of a smart contract-controlled Yogi Pool. It is flexible enough to be used directly to create customizable Smart Pools. Like the Core Pool \(BPool\), it is created from a factory - and as the name implies, its functionality can be customized to meet the needs of your project.
 
 It is also designed to be easily extensible, and we showcase examples of Configurable Rights Pool extensions in [Smart Pool Templates](smart-pool-templates.md). These are projects with specific needs and custom logic, which need to override and alter core functionality.
 

@@ -4,9 +4,16 @@
 
 Decide on critical parameters, such as sale duration, starting and ending weights, and estimate the demand \(i.e., expected sale rate\), using the [LBP simulator](https://docs.google.com/spreadsheets/d/1naQDt7BFCNtfdd2wUYm6Z3ENgZEI-5sdUud3eOkHYnQ/edit?usp=sharing) to adjust the settings until you are happy with the resulting price curve. \(Best practice is to copy/download it, then customize to your own use case.\)
 
-Post on [\#token-requests](https://discord.gg/VbDahbKd2e) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended, and YOGI rewards require an active CoinGecko price feed.\)
+Post on [\#token-requests](https://discord.gg/VbDahbKd2e) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended.\)
 
 If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. However, to receive YOGI rewards yourself, you must inform the Yogi team and share a EOA wallet for you to receive the distribtion. 
+
+Here's the general process to deploy a Liquidity Bootstrapping Smart Pool, conduct the token sale, and recover the proceeds:
+
+* When you've decided on parameters as described above, [create the smart pool](../../guides/creating-a-smart-pool.md).
+* Call updateWeightsGradually to start the sale. \(Note that unless you pause the pool, it will be visible to the exchange and available for trading immediately, though the weights are fixed until you start the update.\)
+* \(Optionally\) call pokeWeights periodically to cause the weights to change on schedule. This is a public function that anyone can call - including from the public Pool Management interface. You can advertise this, and encourage buyers to poke for you \(it can be fairly expensive\). Large buyers would do well to pokeWeights before buying.
+* At the end of the sale, Remove Liquidity to recover the proceeds; i.e., the reserve balance, plus any unsold tokens. If you reserved the add/remove tokens right \(and disallowed public LPs\), you can simply call removeToken. Otherwise, you can remove liquidity directly - though you need to leave at least some dust behind, since there is a minimum balance of each token.
 
 ### How long should an LBP last?
 
@@ -14,7 +21,7 @@ This is a fully customizable parameter that is up to you, based on your objectiv
 
 Considering the fast pace and unpredictability of events happening regularly in DeFi, making your LBP too short could allow obstacles that are unrelated to your project \(i.e., a spike in Ethereum network congestion or a new yield farming craze\) to get in the way of a successful sale. We would recommend at least 3 days, but you are certainly free to make it shorter if you believe it would better serve your particular case.
 
-Note that the default minimum duration is approximately 2 weeks \(and 2 hours for the add token time lock\); using a shorter period will require overriding that default when you create the pool.
+#### _Note that the default minimum duration is approximately 2 weeks \(and 2 hours for the add token time lock\); using a shorter period will require overriding that default when you create the pool. This mainly applies to those writing scripts; if you use the smart pool GUI, the defaults are very short \(both 10 blocks\)._
 
 ### How should I choose a starting price?
 

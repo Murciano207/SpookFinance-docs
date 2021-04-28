@@ -4,9 +4,9 @@
 
 Decide on critical parameters, such as sale duration, starting and ending weights, and estimate the demand \(i.e., expected sale rate\), using the [LBP simulator](https://docs.google.com/spreadsheets/d/1t6VsMJF8lh4xuH_rfPNdT5DM3nY4orF9KFOj2HdMmuY/edit?usp=sharing) to adjust the settings until you are happy with the resulting price curve. \(Best practice is to copy/download it, then customize to your own use case.\)
 
-Post on [\#token-requests](https://discord.gg/VbDahbKd2e) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended, and YOGI rewards require an active CoinGecko price feed, or at least "preview" mode.\) You can submit your pool metadata on [this form](https://docs.google.com/forms/d/18uAtnWJk7eVXl1VTnKAX5NmMJUST9pvvF43E3YtjT4E/) \(e.g., token symbol and name, icons for the token and pool, descriptive text, a url for the sale page, etc.\)
+Post on [\#token-requests](https://discord.gg/VbDahbKd2e) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended.\)
 
-If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. See the [Liquidity Mining ](../../core-concepts/bal-liquidity-mining/)page for staking and other special cases. If you contribute significant long-term liquidity to the platform, you can apply to have smart contract deployment gas costs reimbursed from the Balancer Ecosystem fund [here](https://docs.google.com/forms/d/e/1FAIpQLSeLAowndhx7n_ANMME16ZyPkvZgeJx0gcmP8loxoF0ZNMW6BQ/viewform).
+If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. However, to receive YOGI rewards yourself, you must inform the Yogi team and share a EOA wallet for you to receive the distribtion. 
 
 Here's the general process to deploy a Liquidity Bootstrapping Smart Pool, conduct the token sale, and recover the proceeds:
 
@@ -61,7 +61,7 @@ In contrast, if your upfront capital is 1M USDC, you’d be able to sell around 
 
 ### How can I calculate different scenarios for the amount of tokens to sell, based on the amount of seed capital and pool weights?
 
-You can use our [LBP simulator](https://docs.google.com/spreadsheets/d/1t6VsMJF8lh4xuH_rfPNdT5DM3nY4orF9KFOj2HdMmuY/edit?usp=sharing) to plug in your variables and see the projected results. \(Best practice is to copy it so you have your own version, or even download to Excel.\)
+You can use our [LBP simulator](https://docs.google.com/spreadsheets/d/1naQDt7BFCNtfdd2wUYm6Z3ENgZEI-5sdUud3eOkHYnQ/edit?usp=sharing) to plug in your variables and see the projected results. \(Best practice is to copy it so you have your own version, or even download to Excel.\)
 
 There's a lot going on there, but a good place to start is the "ad hoc" simulator at the top right. There, you can type in balances, weights, and the swap fee, and see what the initial price would be. Then you can type your starting values into the main interface on the top left, and experiment with different ending weights and sale rates to come up with a reasonable price curve. It will also display the total proceeds and leftover tokens.
 
@@ -97,15 +97,15 @@ For instance, if you started at 24/1, and ended at 15/35, the percentages work o
 
 You can sell your token for any ERC-20 tokens. You can choose up to 7 other tokens to be used as reserve assets in your LBP token sale. Projects typically sell their tokens for highly liquid stablecoins such as DAI or USDC; and/or for WETH.
 
-### How do I get my token listed by name and logo on the Balancer exchange UI?
+### How do I get my token listed by name and logo on the Yogi exchange UI?
 
-The Balancer team regularly monitors the crypto landscape and adds new tokens to our listings based on internal requirements. Tokens do not need to request to be listed on the exchange, as it is done proactively.
+The Yogi team regularly monitors the crypto landscape and adds new tokens to our listings based on internal requirements. Tokens do not need to request to be listed on the exchange, as it is done proactively.
 
-If you are launching an LBP and want to make sure that your token is listed on the exchange before launch, please [contact the team](mailto:contact@balancer.finance) for assistance.
+If you are launching an LBP and want to make sure that your token is listed on the exchange before launch, please [contact the team](mailto:yogi.fi@protonmail.com) for assistance.
 
 ### How do I get my token whitelisted for YOGI mining earnings?
 
-[This page](../../core-concepts/bal-liquidity-mining/exchange-and-reward-listing.md) describes the process.
+[This page](../../core-concepts/yogi-liquidity-mining/exchange-and-reward-listing.md) describes the process.
 
 ### After providing the initial seed capital needed to launch an LBP, do I need to deposit additional capital later?
 
@@ -120,7 +120,7 @@ Yes. Conversely, if you wrote your own script to deploy the pool \(vs using the 
 
 DSProxy contracts are "helper contracts" deployed per user account to make interacting with multiple pools easier and more gas-efficient. If you're starting from a script and don't have one, you can start to create a pool through the GUI, and it will prompt you to create a proxy as the first step.
 
-The[ Pool Management GUI](https://github.com/balancer-labs/pool-management-vue) and [Configurable Rights Pool](https://github.com/balancer-labs/configurable-rights-pool) are both open source. You can refer to the large test suite for many examples of how to interact with the CRP, and both the CRP suite and the Vue app contain helper functions for things like slippage and adding/removing liquidity. There are also many simulators available, linked at the bottom of the [CRP Tutorial](../../guides/crp-tutorial/).
+The[ Pool Management GUI](https://github.com/yogi-fi/yogi-pools) and [Configurable Rights Pool](https://github.com/yogi-fi/yogi-crp) are both open source. You can refer to the large test suite for many examples of how to interact with the CRP, and both the CRP suite and the Vue app contain helper functions for things like slippage and adding/removing liquidity. There are also many simulators available, linked at the bottom of the [CRP Tutorial](../../guides/crp-tutorial/).
 
 We've tried to make it as clear and straightforward as possible - but there are subtleties the GUI handles that you would need to hand-code in a script. For instance, balances for tokens with less than 18 must be "normalized." This includes many common tokens; e.g., USDC has 6, Compound cTokens all have 8, etc.
 
@@ -130,13 +130,13 @@ One final note - if you deploy a CRP through a script, we recommend using the st
 
 ### Can I use a "Pausable" token in the LBP?
 
-You can, but there are special considerations in this case! Since Balancer is a permissionless protocol, once your tokens are "in the wild," anyone can do anything they want with them - including creating new Balancer pools \(or Uniswap pools, or pools on any other protocol\).
+You can, but there are special considerations in this case! Since Yogi is a permissionless protocol, once your tokens are "in the wild," anyone can do anything they want with them - including creating new Yogi pools \(or Pancakeswap pools, or pools on any other protocol\).
 
 Normally this doesn't hurt anything - but if you pause the token contract after the sale - preventing all transfers - anyone who added liquidity to any of these other pools will no longer be able to withdraw their funds.
 
 For this reason, your LBP pool definitely needs to use the "Must whitelist LPs" right to prevent public LPs - otherwise they could get "stuck" in this manner.
 
-Since there is no way to prevent token holders from creating new Uniswap, Balancer, etc. pools during the sale, it would be a good idea to mention in your announcement that there is only **one** official pool - which does **not** allow adding liquidity - and any users who add liquidity to any "imposter" pools, or send them to any account they do not control, will lose funds if they fail to withdraw them before the end of the sale.
+Since there is no way to prevent token holders from creating new Uniswap, Yogi, etc. pools during the sale, it would be a good idea to mention in your announcement that there is only **one** official pool - which does **not** allow adding liquidity - and any users who add liquidity to any "imposter" pools, or send them to any account they do not control, will lose funds if they fail to withdraw them before the end of the sale.
 
 ### Can I allow public Liquidity Providers?
 
@@ -146,5 +146,5 @@ If you take this approach, there are a few things to keep in mind.
 
 * You will not be able to end the sale with removeToken, since you will not have anough YPT, and will need to "Remove Liquidity" to terminate the sale. Note that you cannot remove 100% from a smart pool, since there are minimum balance requirements, but you can remove very close to 100%, down to dust - whatever leaves all balances &gt; 10^-6. One safe technique is to remove 99.9% first, see what's left, and then remove 99.9% again \(if it's worth the gas\).
 * It is possible for "whales" to unbalance your pool by adding large amounts of "single-sided" liquidity, instantaneously changing the prices, possibly enough to induce arbitrage and impermanent loss. Large initial balances \(and swap fees\) mitigate this risk. Also, the protocol prevents adding more than half the current balance of any token in a single transaction.
-* Since Balancer is a permissionless protocol, anyone can create new pools. Perhaps you have a staking protocol, and encourage LPs to stake their YPTs for additional earnings. In this case, it's important to make your users aware there might be "counterfeit" pools, and clearly direct them to **your** pool, whose tokens your staking contract accepts.
+* Since Yogi is a permissionless protocol, anyone can create new pools. Perhaps you have a staking protocol, and encourage LPs to stake their YPTs for additional earnings. In this case, it's important to make your users aware there might be "counterfeit" pools, and clearly direct them to **your** pool, whose tokens your staking contract accepts.
 

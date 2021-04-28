@@ -1,6 +1,6 @@
 # Smart Pool Templates
 
-Balancer provides templates at two levels. At the contract level, templates are examples of how to extend the core Smart Pool contract for custom use cases \(see below\).
+Yogi provides templates at two levels. At the contract level, templates are examples of how to extend the core Smart Pool contract for custom use cases \(see below\).
 
 For most use cases, you can just use the Configurable Rights Pool directly, and need only to customize the settings. The [Smart Pool Templates](../../guides/smart-pool-templates-gui/) in the guides section show examples of how to configure smart pools for different expected use cases.
 

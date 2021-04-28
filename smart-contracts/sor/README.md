@@ -4,17 +4,17 @@
 
 Smart Order Router, or SOR, is an off-chain linear optimization of routing orders across pools for best price execution. It takes as input a desired amount of any token to be traded for another token, and returns a list of pools/amounts that should be traded such that the amount of returned tokens is maximized. The sum of the amounts to be traded with each pool equals the desired amount given as input.
 
-SOR exists in the Bronze release as a way to aggregate liquidity across all Balancer pools. Future releases of Balancer will accomplish this on-chain, and allow aggregate contract fillable liquidity.
+SOR exists in the Bronze release as a way to aggregate liquidity across all Yogi pools. Future releases of Yogi will accomplish this on-chain, and allow aggregate contract fillable liquidity.
 
 Liquidity aggregators are free to use the SOR npm package or create their own order routing across pools.
 
 ## Motivation
 
-Since there might be many Balancer pools that contain a given pair, trading only with the most liquid pool is not ideal. The fact that after a single-pool trade arbitrageurs can profit by leveling all pool prices means that the single-pool trader left value on the table.
+Since there might be many Yogi pools that contain a given pair, trading only with the most liquid pool is not ideal. The fact that after a single-pool trade arbitrageurs can profit by leveling all pool prices means that the single-pool trader left value on the table.
 
 The ideal solution - in a world where there were no gas costs or gas limits - would be to trade with all pools available in the desired pair. The amount traded with each pool should move them all to the same new spot price. This would mean all pools would be in an arbitrage-free state, and no further value could be extracted by arbitrageurs \(which always comes at the expense of the trader\).
 
-As there are incremental gas costs associated with interacting with additional Balancer pools, the SOR ensures that any additional interactions are profitable; i.e., the profit obtained through trading with each new pool exceeds the associated gas cost. This is an optimization problem that depends on the gas fees paid to the Ethereum network: higher gas prices may cause the SOR to select fewer trading pools.
+As there are incremental gas costs associated with interacting with additional Yogi pools, the SOR ensures that any additional interactions are profitable; i.e., the profit obtained through trading with each new pool exceeds the associated gas cost. This is an optimization problem that depends on the gas fees paid to the Ethereum network: higher gas prices may cause the SOR to select fewer trading pools.
 
 ## How it works
 
@@ -24,15 +24,15 @@ The fundamental optimization problem is to find the path through a set of Yogi P
 
 Even though the SOR runs totally off-chain, it has been designed to be EVM-tractable, since we intend to release an on-chain version in the future.
 
-Since we know the price will increase after trading, due to slippage, and in order to make the SOR EVM-tractable, the function that calculates the spot price of a Balancer pool after a trade has been linearized. We refer to EP – the estimated price – as the spot price a pool will have after a trade, according to that linearized approximation. The figure below shows the real \(non-linear\) spot price after a given amount is traded versus the linearized approximation we use.
+Since we know the price will increase after trading, due to slippage, and in order to make the SOR EVM-tractable, the function that calculates the spot price of a Yogi pool after a trade has been linearized. We refer to EP – the estimated price – as the spot price a pool will have after a trade, according to that linearized approximation. The figure below shows the real \(non-linear\) spot price after a given amount is traded versus the linearized approximation we use.
 
 ![](../../.gitbook/assets/picture1.png)
 
 ### Prices of interest
 
-Since we linearize the spot price functions of all Balancer pools, we can interpolate prices and amounts to make our optimization solution simpler. 
+Since we linearize the spot price functions of all Yogi pools, we can interpolate prices and amounts to make our optimization solution simpler. 
 
-To help visualize what this means, imagine three Balancer pools containing the trade tokens. We define EPs of interest as sets of prices where either of the following conditions apply:
+To help visualize what this means, imagine three Yogi pools containing the trade tokens. We define EPs of interest as sets of prices where either of the following conditions apply:
 
 1. There is a pool with exactly that initial spot price; or
 2. The spot prices of two pools "cross" at that price.
@@ -55,7 +55,7 @@ The solution for trading an amount B + C can be found by interpolating the trade
 
 ## Development
 
-Yogi Studio have developed the [SOR npm package](https://www.npmjs.com/package/@balancer-labs/sor), an easy to use implementation of the above concepts. For documentation for working with the package please see this [page](https://docs.balancer.finance/sor/development).
+Yogi Studio have developed the [SOR npm package](https://github.com/yogi-fi/yogi-sor), an easy to use implementation of the above concepts. For documentation for working with the package please see this [page](https://docs.yogi.fi/sor/development).
 
 
 
