@@ -16,11 +16,9 @@
   * [Limitations](core-concepts/protocol/limitations.md)
   * [Math](core-concepts/protocol/index/README.md)
     * [Exponentiation](core-concepts/protocol/index/approxing.md)
-* [YOGI Governance Token](core-concepts/yogi-governance-token/README.md)
-  * [YOGI for Gas](core-concepts/yogi-governance-token/yogi-for-gas.md)
-* [Liquidity Mining](core-concepts/yogi-liquidity-mining/README.md)
-  * [Exchange and YOGI Mining Listing](core-concepts/yogi-liquidity-mining/exchange-and-reward-listing.md)
-  * [Liquidity Mining Estimates API](core-concepts/yogi-liquidity-mining/liquidity-mining-estimates-api.md)
+* [YOGI Governance Token](core-concepts/yogi-governance-token.md)
+* [Liquidity Mining](core-concepts/liquidity-mining/README.md)
+  * [Exchange and YOGI Mining Listing](core-concepts/liquidity-mining/exchange-and-yogi-mining-listing.md)
 * [Security](core-concepts/security/README.md)
   * [Audits](core-concepts/security/audits.md)
   * [Bug Bounty](core-concepts/security/bounty.md)
@@ -43,14 +41,13 @@
 
 ## API
 
-* [Migration to Version 1.0](api/migration-to-version-0.4.md)
 * [Events](api/core-contracts.md)
 * [API Index](api/api.md)
 * [UML Docs](api/uml-docs.md)
 
 ## Guides
 
-* [Interact via BscScan](guides/withdrawing-liquidity-via-bscscan.md)
+* [Interact via BscScan](guides/interact-via-bscscan.md)
 * [Using the SOR](guides/making-a-trade.md)
 * [Creating a Shared Pool](guides/creating-a-yogi-pool.md)
 * [Creating a Smart Pool](guides/creating-a-smart-pool.md)
@@ -63,9 +60,4 @@
   * [Perpetual Synthetic Pool](guides/smart-pool-templates-gui/perpetual-synthetic-pool.md)
   * [Investors' Club](guides/smart-pool-templates-gui/investors-club.md)
   * [Experimental](guides/smart-pool-templates-gui/experimental.md)
-* [Testing on Testnet](guides/testing-on-testnet.md)
-* [Hackathons](guides/hackathons/README.md)
-  * [Hacking & Testing](guides/hackathons/hacking-and-testing.md)
-  * [Judging](guides/hackathons/judging.md)
-  * [Ideas](guides/hackathons/ideas.md)
 

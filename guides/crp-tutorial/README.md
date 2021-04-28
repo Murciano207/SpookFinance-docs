@@ -57,10 +57,10 @@ struct Rights {
 ```
 
 {% hint style="warning" %}
-Note that if you are whitelisting LPs, and intend for the whitelisted users to Add Liquidity through the Balancer GUI, you will need to whitelist their DSProxy addresses - not their wallet address. \(The DSProxy address can be found at the bottom of the wallet page. New users will need to create a DSProxy before adding liquidity.\)
+Note that if you are whitelisting LPs, and intend for the whitelisted users to Add Liquidity through the Yogi GUI, you will need to whitelist their DSProxy addresses - not their wallet address. \(The DSProxy address can be found at the bottom of the wallet page. New users will need to create a DSProxy before adding liquidity.\)
 {% endhint %}
 
-At this point \(after calling newCRP\), we have a deployed Configurable Rights Object with all its permissions and parameters defined. But we can't do much with it - mainly because there is no Core Pool yet. We need to deploy a new Core Pool, with our Smart Pool as the controller, by calling createPool\(initialSupply\). \(There is also an overloaded version of createPool; more on that later.\) 
+At this point \(after calling newCRP\), we have a deployed Configurable Rights Object with all its permissions and parameters defined. But we can't do much with it - mainly because there is no Core Pool yet. We need to deploy a new Core Pool, with our Smart Pool as the controller, by calling createPool\(initialSupply\). \(There is also an overloaded version of createPool; more on that later.\)
 
 We've already defined the tokens and balances we want the pool to hold. When we call createPool with a value for initialSupply, it will mint _initialSupply_ Yogi Pool Tokens \(YPTs\) and transfer them to the caller, simultaneously pulling the correct amount of collateral tokens into the contract. \(They end up in the Core Pool, passed through the CRP.\)
 
@@ -70,7 +70,7 @@ To accomplish this, we need to allow the CRP to spend our collateral tokens, bef
 const MAX = web3.utils.toTwosComplement(-1);
 
 // crpPool was returned from CRPFactory.newCRP()
-    
+
 await weth.approve(crpPool.address, MAX);
 await dai.approve(crpPool.address, MAX);
 await xyz.approve(crpPool.address, MAX);
@@ -82,15 +82,18 @@ await crpPool.createPool(toWei('100'));
 Now we're in business! The pool will already be set up for public swapping, and depending on the permissions settings, possibly public liquidity provision as well. The Core Pool will show up on the Exchange GUI.
 
 {% hint style="info" %}
-Refer to [Exchange and Reward Listing](../../core-concepts/bal-liquidity-mining/exchange-and-reward-listing.md) for instructions on adding any new tokens you might be introducing to the Exchange GUI, and making them eligible for YOGI governance tokens. Earnings are distributed weekly, and are not applied retroactively, so you'll need to have the token approved by 00:00 UTC the Monday **before** you launch your pool.
+Refer to [Exchange and Reward Listing](https://github.com/yogi-fi/yogi-docs/tree/73dc4df57987879a482d4e7d7295475ca3ddc790/core-concepts/bal-liquidity-mining/exchange-and-reward-listing.md) for instructions on adding any new tokens you might be introducing to the Exchange GUI, and making them eligible for YOGI governance tokens. Earnings are distributed weekly, and are not applied retroactively, so you'll need to have the token approved by 00:00 UTC the Monday **before** you launch your pool.
 {% endhint %}
 
 {% hint style="danger" %}
 If your smart pool is eligible for YOGI, earnings will be redirected to LPs - as long as you create the pool through our standard factory. If you create a new pool using a different factory, or deploy a pool contract directly, you will need to apply for a redirect or redistribution. \(You will also need a redirect if your CRP controller is a contract that holds YPTs, and doesn't have a way to withdraw them.\)
+<<<<<<< HEAD
 
 The process for the redirect is to make a pull request to update [this file](https://github.com/balancer-labs/bal-mining-scripts/blob/master/config/redirect.json) in our script repository with the CRP and your wallet address, along with proof that you own the pool \(e.g., the CRP deployment transaction hash\). Here's an [example request](https://github.com/balancer-labs/bal-mining-scripts/pull/11). Similarly, if you have a CRP and want to handle the redistribution differently, you can make a pull request to update [this file](https://github.com/balancer-labs/bal-mining-scripts/blob/master/config/redistribute.json).
 
 Here is a [diagram](https://drive.google.com/file/d/13QOMv-PVNZqJwdz9g6QKFqBUJwOypkZY/view) detailing how we compute YOGI mining earnings.
+=======
+>>>>>>> 28caf73858a9ac3c4fd56c4eb8be8bad3ae68d50
 {% endhint %}
 
 {% hint style="warning" %}

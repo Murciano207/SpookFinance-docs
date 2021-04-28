@@ -1,62 +1,44 @@
 # Developing
 
-WIP - still needs to be cleaned up
-
 ```javascript
-require('dotenv').config()
-const sor = require('@balancer-labs/sor');
-const BigNumber = require('bignumber.js');
-const ethers = require('ethers');
-
-// KOVAN
-let tokenIn = '0x1528F3FCc26d13F7079325Fb78D9442607781c8C' // DAI
-let tokenOut = '0xd0A1E359811322d97991E03f863a0C30C2cF029C' // WETH
+import { sor } from 'yogi-sor';
+import { BigNumber } from 'bignumber.js';
+import { JsonRpcProvider } from '@ethersproject/providers';
 
 // MAINNET
-// let tokenIn = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI
-// let tokenOut = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2' // WETH
+const tokenIn = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'; // WBNB
+const tokenOut = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'; // BUSD
 
-function scale(input, decimalPlaces) {
-    const scalePow = new BigNumber(decimalPlaces.toString());
-    const scaleMul = new BigNumber(10).pow(scalePow);
-    return new BigNumber(input).times(scaleMul);
-}
-
-const example = async function() {
-    let pools = await sor.getPoolsWithTokens(tokenIn, tokenOut);
-
-    if (pools.pools.length === 0)
-        throw Error('There are no pools with selected tokens');
-
-    let poolData = [];
-    pools.pools.forEach(p => {
-        let tI = p.tokens.find(t => ethers.utils.getAddress(t.address) === ethers.utils.getAddress(tokenIn))
-        let tO = p.tokens.find(t => ethers.utils.getAddress(t.address) === ethers.utils.getAddress(tokenOut))
-        let obj = {
-            id: p.id,
-            decimalsIn: tI.decimals,
-            decimalsOut: tO.decimals,
-            balanceIn: scale(tI.balance, tI.decimals),
-            balanceOut: scale(tO.balance, tO.decimals),
-            weightIn: scale(new BigNumber(tI.denormWeight).div(p.totalWeight), 18),
-            weightOut: scale(new BigNumber(tO.denormWeight).div(p.totalWeight), 18),
-            swapFee: scale(p.swapFee, 18),
-        };
-
-        poolData.push(obj);
-    });
-
-    const sorSwaps = await sor.smartOrderRouter(
-        poolData,
-        'swapExactIn',
-        new BigNumber('10000000000000000000'),
-        new BigNumber('10'),
-        0
+(async function() {
+    const provider = new JsonRpcProvider(`https://bsc-dataseed.binance.org/`);
+    
+    const poolsUrl = `https://thegraph.com/explorer/subgraph/yogi-fi/yogi-subgraph`;
+    
+    const gasPrice = new BigNumber('30000000000');
+    
+    const maxNoPools = 4;
+    
+    const SOR = new sor.SOR(provider, gasPrice, maxNoPools, poolsUrl);
+    
+    // isFetched will be true on success
+    let isFetched = await SOR.fetchPools();
+    
+    await SOR.setCostOutputToken(tokenOut);
+    
+    const swapType = 'swapExactIn';
+    
+    const amountIn = new BigNumber('1000000000000000000');
+    
+    let [swaps, amountOut] = await SOR.getSwaps(
+        tokenIn,
+        tokenOut,
+        swapType,
+        amountIn
     );
-
-    console.log(sorSwaps)
-}
-
-example()
+    console.log(`Total Return: ${amountOut.toString()}`);
+    console.log(`Swaps: `);
+    console.log(swaps);
+})()
 ```
+
 

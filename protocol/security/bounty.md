@@ -2,15 +2,13 @@
 
 ### Overview
 
-Balancer has completed smart contract audits with Trail of Bits and Open Zeppelin. We also will run a continuous bug bounty program for the bronze release of Balancer core.
+Yogi is working on a complete smart contract audits with CertiK. We also will run a continuous bug bounty program for the bronze release of Yogi core.
 
 ### Scope
 
-The bug bounty covers any of the core smart contracts deployed on Mainnet. The code can be found at: [https://github.com/balancer-labs/balancer-core](https://github.com/balancer-labs/balancer-core)
+The bug bounty covers any of the core smart contracts deployed on Mainnet. The code can be found at: [https://github.com/yogi-fi/yogi-core](https://github.com/yogi-fi/yogi-core)
 
-Submissions should be based off commit hash: [https://github.com/balancer-labs/balancer-core/tree/2d88257fb27ad3c84b5166304a342e66055a81b3](https://github.com/balancer-labs/balancer-core/tree/2d88257fb27ad3c84b5166304a342e66055a81b3)
-
-Mainnet BFactory can be found at: [https://etherscan.io/address/0x9424b1412450d0f8fc2255faf6046b98213b76bd](https://etherscan.io/address/0x9424b1412450d0f8fc2255faf6046b98213b76bd)
+Mainnet BFactory can be found at: [https://bscscan.com/address/0x2Fab27B3B379b550AED296B7Fb48D7EfEAabda57](https://bscscan.com/address/0x2Fab27B3B379b550AED296B7Fb48D7EfEAabda57)
 
 _Additional second layer contracts, such as the exchange proxy or individual smart pool contracts, may be added at a further date._
 
@@ -76,11 +74,11 @@ The bounty program will pay out rewards according to the severity of a vulnerabi
 
 ### Reporting / Disclosures
 
-Please report any findings to [security@balancer.finance](mailto:security@balancer.finance), with full details about any vulnerability and steps / code to reproduce. Allow us time to review and remediate any findings before public disclosure.
+Please report any findings to [yogi.fi@protonmail.com](mailto:yogi.fi@protonmail.com), with full details about any vulnerability and steps / code to reproduce. Allow us time to review and remediate any findings before public disclosure.
 
 ### Ineligible Findings
 
 * Duplicate vulnerabilities. Only the first reporter will be rewarded.
 * Findings already known as part of a formal audit.
-* Findings related to non-standard ERC20 tokens might be ineligible as many vulnerabilities might be inserted in non-standard ERC20 tokens on purpose for applying for this bug bounty. 
+* Findings related to non-standard BEP20 tokens might be ineligible as many vulnerabilities might be inserted in non-standard BEP20 tokens on purpose for applying for this bug bounty. 
 

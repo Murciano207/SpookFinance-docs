@@ -33,7 +33,7 @@ Of course, Yogi has no control over the contracts of BEP20 tokens placed in Yogi
 
 We are working on putting together a more detailed roadmap. The of V1 Yogi went live on April 26th, 2021.
 
-The next step is V2 - set to launch in Q2 2021. It will be a quantum leap forward! We've vastly simplified the interfaces, rewritten the UI from scratch, improved gas efficiency and performance, and added significant new functionality.
+The next step is V2 - set to launch in Q3 2021. It will be a quantum leap forward! We've vastly simplified the interfaces, rewritten the UI from scratch, improved gas efficiency and performance, and added significant new functionality.
 
 Yogi V2 is an open, flexible, generalized AMM launch platform, achieved primarily through decoupling token storage and accounting from pool price computation logic. This allows projects to create new kinds of pools optimized for particular tokens or use cases, without changing the core protocol.
 
@@ -125,16 +125,12 @@ There are two ways a trader can interact with Yogi Protocol:
 
 There are two main ways a liquidity provider or portfolio manager can interact with Yogi Protocol:
 
-* Through our [Pool Manager](https://pools.balancer.exchange/#/) front-end \(available shortly\)
+* Through our [Pool Manager](https://pools.yogi.fi/#/) front-end
 * Directly through our smart contracts on BSC 
 
 ### How can I claim YOGI tokens as a Liquidity Provider?
 
-Head over to [https://claim.yogi.fi/](https://claim.yogi.fi/) to claim your YOGI from liquidity mining.
-
-YOGI tokens for liquidity mining of any given week will be available to be claimed the following Tuesday evening \(EST time\).
-
-This claiming mechanism will allow you to choose if you want to claim on a weekly basis or accrue and claim at a later date. At this time, YOGI earned through liquidity mining does not expire, so you can take your time to claim them. If for some reason this changes in the future, everyone will be notified well in advance.
+$YOGI tokens will be directly distributed to Liquidity providers on a weekly basis. If you are providing liquidity to a pool with at least 2 whitelisted assets, you will receive $YOGI tokens periodically without any other interaction required.
 
 ### Can Yogi be used as an Index Fund?
 
@@ -150,7 +146,7 @@ We cannot provide tax or accounting advice. Tax regulations are specific to juri
 
 Yogi Protocol smart contracts have been designed with security as a top priority. The core protocol code has been reviewed by Consensys Diligence, and formally audited by both [Trail of Bits](https://github.com/balancer-labs/balancer-core/blob/master/Trail%20of%20Bits%20Full%20Audit.pdf) and [Open Zeppelin](https://blog.openzeppelin.com/balancer-contracts-audit/). \(Of course, we cannot guarantee that bugs won’t be found in the future.\)
 
-Yogi Pools are not [upgradeable](https://medium.com/consensys-diligence/upgradeability-is-a-bug-dba0203152ce) \(though other third-party Smart Pool implementations might be\), and there are no admin keys or backdoors. 
+Yogi Pools are not [upgradeable](https://medium.com/consensys-diligence/upgradeability-is-a-bug-dba0203152ce) \(though other third-party Smart Pool implementations might be\), and there are no admin keys or backdoors.
 
 Remember that the tokens held in Yogi Pools are also smart contracts - not controlled by Yogi - and may have their own risks. Yogi does not support non-BEP20-conforming tokens, but pools may have been created that use them anyway.
 

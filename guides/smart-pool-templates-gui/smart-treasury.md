@@ -6,7 +6,7 @@ This is an emerging use case, based in large part on [this article](https://www.
 
 Here we have a network of producers and consumers, where users pay for services with a fee token, and that income is used to pay producers in project tokens. Since the treasury is a Smart Pool, excess ETH would raise the price and cause the market to swap in project tokens for ETH until it the treasury is rebalanced - effectively an automatic buyback.
 
-The treasury can also buyback on a schedule by adding liquidity \(e.g., depositing reserve currency income\), and replenishes the market supply through issuance to producers. Maintaining the treasury as a Balancer pool means the market has guaranteed liquidity through the protocol itself.
+The treasury can also buyback on a schedule by adding liquidity \(e.g., depositing reserve currency income\), and replenishes the market supply through issuance to producers. Maintaining the treasury as a Yogi pool means the market has guaranteed liquidity through the protocol itself.
 
 Legend**: required;** ~~not required;~~ _optional_
 

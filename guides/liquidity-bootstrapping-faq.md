@@ -2,11 +2,18 @@
 
 ### How do I launch a Liquidity Bootstrapping Pool?
 
-Decide on critical parameters, such as sale duration, starting and ending weights, and estimate the demand \(i.e., expected sale rate\), using the [LBP simulator](https://docs.google.com/spreadsheets/d/1t6VsMJF8lh4xuH_rfPNdT5DM3nY4orF9KFOj2HdMmuY/edit?usp=sharing) to adjust the settings until you are happy with the resulting price curve. \(Best practice is to copy/download it, then customize to your own use case.\)
+Decide on critical parameters, such as sale duration, starting and ending weights, and estimate the demand \(i.e., expected sale rate\), using the [LBP simulator](https://docs.google.com/spreadsheets/d/1naQDt7BFCNtfdd2wUYm6Z3ENgZEI-5sdUud3eOkHYnQ/edit?usp=sharing) to adjust the settings until you are happy with the resulting price curve. \(Best practice is to copy/download it, then customize to your own use case.\)
 
-Post on [\#token-requests](https://discord.gg/ARJWaeF) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended, and YOGI rewards require an active CoinGecko price feed.\)
+Post on [\#token-requests](https://discord.gg/VbDahbKd2e) to request eligibility for governance token rewards. \(At least a week’s advance notice is recommended.\)
 
-If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. However, to receive YOGI rewards yourself, you must redirect them from the smart pool contract to a wallet that can receive them - otherwise they will be locked in the contract and lost. This is done through a pull request to update [this file](https://github.com/balancer-labs/bal-mining-scripts/blob/master/redirect.json) in the mining repository. 
+If your pool is eligible for weekly YOGI rewards, they will be distributed to your LPs automatically. However, to receive YOGI rewards yourself, you must inform the Yogi team and share a EOA wallet for you to receive the distribtion. 
+
+Here's the general process to deploy a Liquidity Bootstrapping Smart Pool, conduct the token sale, and recover the proceeds:
+
+* When you've decided on parameters as described above, [create the smart pool](../../guides/creating-a-smart-pool.md).
+* Call updateWeightsGradually to start the sale. \(Note that unless you pause the pool, it will be visible to the exchange and available for trading immediately, though the weights are fixed until you start the update.\)
+* \(Optionally\) call pokeWeights periodically to cause the weights to change on schedule. This is a public function that anyone can call - including from the public Pool Management interface. You can advertise this, and encourage buyers to poke for you \(it can be fairly expensive\). Large buyers would do well to pokeWeights before buying.
+* At the end of the sale, Remove Liquidity to recover the proceeds; i.e., the reserve balance, plus any unsold tokens. If you reserved the add/remove tokens right \(and disallowed public LPs\), you can simply call removeToken. Otherwise, you can remove liquidity directly - though you need to leave at least some dust behind, since there is a minimum balance of each token.
 
 ### How long should an LBP last?
 
@@ -14,7 +21,7 @@ This is a fully customizable parameter that is up to you, based on your objectiv
 
 Considering the fast pace and unpredictability of events happening regularly in DeFi, making your LBP too short could allow obstacles that are unrelated to your project \(i.e., a spike in Ethereum network congestion or a new yield farming craze\) to get in the way of a successful sale. We would recommend at least 3 days, but you are certainly free to make it shorter if you believe it would better serve your particular case.
 
-Note that the default minimum duration is approximately 2 weeks \(and 2 hours for the add token time lock\); using a shorter period will require overriding that default when you create the pool.
+#### _Note that the default minimum duration is approximately 2 weeks \(and 2 hours for the add token time lock\); using a shorter period will require overriding that default when you create the pool. This mainly applies to those writing scripts; if you use the smart pool GUI, the defaults are very short \(both 10 blocks\)._
 
 ### How should I choose a starting price?
 
@@ -42,7 +49,7 @@ In contrast, if your upfront capital is 1M USDC, you’d be able to sell around 
 
 ### How can I calculate different scenarios for the amount of tokens to sell, based on the amount of seed capital and pool weights?
 
-You can use our [LBP simulator](https://docs.google.com/spreadsheets/d/1t6VsMJF8lh4xuH_rfPNdT5DM3nY4orF9KFOj2HdMmuY/edit?usp=sharing) to plug in your variables and see the projected results. \(Best practice is to copy it so you have your own version, or even download to Excel.\)
+You can use our [LBP simulator](https://docs.google.com/spreadsheets/d/1naQDt7BFCNtfdd2wUYm6Z3ENgZEI-5sdUud3eOkHYnQ/edit?usp=sharing) to plug in your variables and see the projected results. \(Best practice is to copy it so you have your own version, or even download to Excel.\)
 
 There's a lot going on there, but a good place to start is the "ad hoc" simulator at the top right. There, you can type in balances, weights, and the swap fee, and see what the initial price would be. Then you can type your starting values into the main interface on the top left, and experiment with different ending weights and sale rates to come up with a reasonable price curve. It will also display the total proceeds and leftover tokens.
 
@@ -70,15 +77,15 @@ You can also call `updateWeight` \(as long as a gradual update is not running\) 
 
 You can sell your token for any ERC-20 tokens. You can choose up to 7 other tokens to be used as reserve assets in your LBP token sale. Projects typically sell their tokens for highly liquid stablecoins such as DAI, USDC, or USDT; and/or for WETH.
 
-### How do I get my token listed by name and logo on the Balancer exchange UI?
+### How do I get my token listed by name and logo on the Yogi exchange UI?
 
-The Balancer team regularly monitors the crypto landscape and adds new tokens to our listings based on internal requirements. Tokens do not need to request to be listed on the exchange, as it is done proactively.
+The Yogi team regularly monitors the crypto landscape and adds new tokens to our listings based on internal requirements. Tokens do not need to request to be listed on the exchange, as it is done proactively.
 
-If you are launching an LBP and want to make sure that your token is listed on the exchange before launch, please [contact the team](mailto:contact@balancer.finance) for assistance.
+If you are launching an LBP and want to make sure that your token is listed on the exchange before launch, please [contact the team](mailto:yogi.fi@protonmail.com) for assistance.
 
 ### How do I get my token whitelisted for YOGI mining rewards?
 
-[This page](../protocol/bal-liquidity-mining/exchange-and-reward-listing.md) describes the process.
+[This page](../protocol/yogi-liquidity-mining/exchange-and-reward-listing.md) describes the process.
 
 ### After providing the initial seed capital needed to launch an LBP, do I need to deposit additional capital later?
 

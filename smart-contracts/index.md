@@ -10,7 +10,7 @@ The **☀️Gold Release☀️** will introduce a few final features that will t
 
 Unless noted otherwise, this document describes the contract architecture for the **🍂Bronze Release🍂**. We have attempted to make note of the functionality that will change for future releases, but it is possible for _any aspect_ of the design to change in both very large and also very subtle ways.
 
-Please take care when interacting with a Balancer pool to ensure you know which release it is associated with. Objects in the Balancer system provide `getColor() returns (bytes32)`, which returns a left-padded ASCII representation of the all-caps color word, ie, `bytes32("BRONZE")`.
+Please take care when interacting with a Yogi pool to ensure you know which release it is associated with. Objects in the Yogi system provide `getColor() returns (bytes32)`, which returns a left-padded ASCII representation of the all-caps color word, ie, `bytes32("BRONZE")`.
 
 Similarly, Configurable Rights Smart Pools have getter functions to return the version of the Smart Pool Manager, Rights Manager, and Safe Math library versions they were linked to on deployment. Of course, you can also retrieve the underlying Core Pool controlled by the Smart Pool, and call getColor\(\) on it.
 
@@ -18,7 +18,7 @@ This is one reason the CRPFactory takes a BFactory parameter - in the future, pa
 
 ### Events
 
-`LOG_CALL` is an anonymous event which uses the function signature as the event signature. It is fired by all stateful functions. The following applies to Balancer Core pools. Smart Pools have similar events and modifiers.
+`LOG_CALL` is an anonymous event which uses the function signature as the event signature. It is fired by all stateful functions. The following applies to Yogi Core pools. Smart Pools have similar events and modifiers.
 
 ```text
 event LOG_CALL(

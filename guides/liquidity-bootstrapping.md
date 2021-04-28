@@ -1,6 +1,6 @@
 # Liquidity Bootstrapping Example
 
-Let's walk through a complete example, using the [Liquidity Bootstrapping](https://balancer.finance/2020/03/04/building-liquidity-into-token-distribution/) use case.
+Let's walk through a complete example, using the Liquidity Bootstrapping use case.
 
 First, we give the token a symbol and name, set the basic pool parameters, and determine the permissions. All we really need to be able to do is change the weights, so we can set all the other permissions false.
 
@@ -108,5 +108,5 @@ for (i = 0; i < blockRange; i++) {
 }
 ```
 
-There are many subtleties; for instance, you could implement a non-linear bootstrapping weight curve by calculating the weights off-chain and setting them directly. For a comprehensive set of tests that demonstrate all features of the Configurable Rights Pool, see our [GitHub](https://github.com/balancer-labs/configurable-rights-pool).
+There are many subtleties; for instance, you could implement a non-linear bootstrapping weight curve by calculating the weights off-chain and setting them directly.
 
