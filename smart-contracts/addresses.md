@@ -14,3 +14,4 @@
 * Exchange Proxy: `0x11bC5d49429eD36ac62F93b523235cd76e022900`
 * Onchain Registry: `0xbF9fdFBF1106DC38a86398E051981ADAffC47c16`
 * [MerkleRedeem](https://github.com/yogi-fi/yogi-claim) \(YOGI Distribution\) `0x88b8Ace687e033fC368aE52f7fA90223A87F537e`
+
