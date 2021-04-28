@@ -2,7 +2,7 @@
 
 Here is the [article](https://balancer.finance/2020/03/04/building-liquidity-into-token-distribution/) describing this common case - basically a sustainable 2020 reboot of the 2017 "ICO" - minus the worst of the legal and regulatory issues. \(The latest term seems to be IDO - Initial DEX Offering.\)
 
-Liquidity Bootstrapping Pools \(LBPs\) are [Smart Pools](../../smart-contracts/smart-pools/) \(aka Configurable Rights Pools\). A smart pool is a contract that controls a Balancer core pool, which contains the tokens and is used on the exchange. Unlike an immutable shared pool, smart pool controllers can change the parameters of the pool - but only in controlled ways. It is therefore less trustless than a shared pool, but does not require the complete trust of a private pool.
+Liquidity Bootstrapping Pools \(LBPs\) are [Smart Pools](../../smart-contracts/smart-pools/) \(aka Configurable Rights Pools\). A smart pool is a contract that controls a Yogi core pool, which contains the tokens and is used on the exchange. Unlike an immutable shared pool, smart pool controllers can change the parameters of the pool - but only in controlled ways. It is therefore less trustless than a shared pool, but does not require the complete trust of a private pool.
 
 The idea of an LBP is to launch a token with low capital requirements, by setting up a two-token pool with a project and a collateral token. \(It's also possible to have multiple reserve tokens.\) The weights are initially set heavily in favor of the project token, then gradually "flip" to favor the collateral coin by the end of the sale. The sale can be calibrated to keep the price more or less steady \(maximizing revenue\), or declining to a desired minimum \(e.g., the initial offering price\).
 
@@ -29,7 +29,7 @@ You would think this wouldn't be much of a problem, since they would be buying a
 
 Another thing that can happen when there is strong demand and price volatility is transaction failures due to "slippage." In this era of high gas prices \(not to mention high ETH prices\), many traders try to lower the fees by entering lower values. This leads to longer confirmation times, and greater risk that the price will change in the time between initiating the transaction and the confirmation. If it changes too much, the transaction will be rejected - but you will still be charged some gas. This gets expensive fast - especially if it happens repeatedly.
 
-To combat this, the simplest strategy is to simply wait for things to calm down. Most sales last multiple days; there will inevitably be quieter periods - and as a bonus, the price might be lower later in the sale. If you really want your tokens right now, the Balancer exchange lets you choose the amount of slippage you will tolerate. Buyers can set this to a higher value \(e.g., 1-2%\), to increase the chances of success.
+To combat this, the simplest strategy is to simply wait for things to calm down. Most sales last multiple days; there will inevitably be quieter periods - and as a bonus, the price might be lower later in the sale. If you really want your tokens right now, the Yogi exchange lets you choose the amount of slippage you will tolerate. Buyers can set this to a higher value \(e.g., 1-2%\), to increase the chances of success.
 
 Of course, you can design a perfect system - but you can never beat human nature. Many buyers still have "2017 PTSD," and think they have to buy immediately - not understanding that they would get a better price by waiting. We have observed an initial price spike on just about every LBP \(possibly just lots of retail volume on the initial announcement\) - and avoiding this is one reason to delay the start of the LBP. You then have time to educate your consumers to buy slowly and not get rekt.
 
@@ -44,7 +44,7 @@ Another untried mechanism is "reverse price discovery." This is a variant of the
 
 This means people can buy tokens "before" the sale - but because the weights are fixed until you call updateWeightsGradually, the price will go up steadily as people buy them. It is essentially a "Uniswap" pool before the sale starts. People will stop buying when the price goes above market, so this is another way to discover market value. Instead of starting high and letting the price drop until people start buying, you start at or even below your estimate, and let people bid the price \*up\* to market value.
 
-This method has the advantage of a lower capital requirement; the higher the initial price, the more capital you need for the sale. The disadvantage is mainly that people could take those tokens and create other pools \(on Balancer or elsewhere\), that could compete with the sale. \(Of course, people can do that anyway as soon as the sale starts.\)
+This method has the advantage of a lower capital requirement; the higher the initial price, the more capital you need for the sale. The disadvantage is mainly that people could take those tokens and create other pools \(on Yogi or elsewhere\), that could compete with the sale. \(Of course, people can do that anyway as soon as the sale starts.\)
 
 Since the core of the strategy is changing weights, you absolutely need to enable that right.
 
@@ -76,8 +76,7 @@ Note that `pokeWeights` changes weights, but not balances - therefore, it can ch
 
 The controller function `updateWeight` changes weights directly - but not the price. This means it must also adjust the balances at the same time \(i.e., transfer tokens\). So the controller can set weights arbitrarily -- but not while an `updateWeightsGradually` is running. And they must have the tokens available to do it.
 
-Though most LBPs are two-token pools \(e.g., a project token and a single reserve currency, usually a stable coin\), it is possible to have three tokens, or more. For instance, a stable coin and WETH, in addition to the project token. [One project](https://pools.balancer.exchange/#/pool/0x10996ec4f3e7a1b314ebd966fa8b1ad0fe0f8307/) was recently launched that way. There is a [simulator](https://docs.google.com/spreadsheets/d/10434m342Rt0rTarCd2SCtMizT9GrMHrK/edit#gid=1694604160) available for this case.
-
+Though most LBPs are two-token pools \(e.g., a project token and a single reserve currency, usually a stable coin\), it is possible to have three tokens, or more. For instance, a stable coin and WBNB, in addition to the project token.
 
 
 

@@ -70,11 +70,11 @@ You can also call `updateWeight` \(as long as a gradual update is not running\) 
 
 You can sell your token for any ERC-20 tokens. You can choose up to 7 other tokens to be used as reserve assets in your LBP token sale. Projects typically sell their tokens for highly liquid stablecoins such as DAI, USDC, or USDT; and/or for WETH.
 
-### How do I get my token listed by name and logo on the Balancer exchange UI?
+### How do I get my token listed by name and logo on the Yogi exchange UI?
 
-The Balancer team regularly monitors the crypto landscape and adds new tokens to our listings based on internal requirements. Tokens do not need to request to be listed on the exchange, as it is done proactively.
+The Yogi team regularly monitors the crypto landscape and adds new tokens to our listings based on internal requirements. Tokens do not need to request to be listed on the exchange, as it is done proactively.
 
-If you are launching an LBP and want to make sure that your token is listed on the exchange before launch, please [contact the team](mailto:contact@balancer.finance) for assistance.
+If you are launching an LBP and want to make sure that your token is listed on the exchange before launch, please [contact the team](mailto:yogi.fi@protonmail.com) for assistance.
 
 ### How do I get my token whitelisted for YOGI mining rewards?
 
