@@ -1,4 +1,4 @@
-# YOGI - Governance Token
+# YOGI Governance Token
 
 Since inception, our goal at Yogi Studio has been to decentralize and diversify governance of the [Yogi Protocol](https://yogi.fi/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Yogi Protocol Governance Token \(YOGI\).
 
@@ -24,9 +24,9 @@ The total supply of YOGI tokens will be capped at 100M. This does NOT mean that 
 
 **25M** YOGI tokens were initially allocated to founders, stock options, advisors and investors, all subject to vesting periods.
 
-**5M** were allocated for the [Yogi Ecosystem Fund](https://etherscan.io/token/0xba100000625a3754423978a60c9317c58a424e3d?a=0xb618f903ad1d00d6f7b92f5b0954dcdc056fc533). This fund will be deployed to attract and incentivize strategic partners who will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
+**5M** were allocated for the [Yogi Ecosystem Fund](https://bscscan.com/tx/0x3648dcfff461e8d683cd0ce94cdb022af2e940437549ec1d256c5d878dd51424). This fund will be deployed to attract and incentivize strategic partners who will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
 
-**5M** were allocated for the [Fundraising Fund](https://etherscan.io/token/0xba100000625a3754423978a60c9317c58a424e3d?a=0xb129f73f1afd3a49c701241f374db17ae63b20eb). Yogi Studio raised a pre-seed and seed round. This fund will be used for future fundraising rounds to support Yogi Studio' operations and growth. YOGI tokens will never be sold to retail investors.
+**5M** were allocated for the [Fundraising Fund](https://bscscan.com/tx/0x6e8a43985fbb17b139d516ad8c28b03a90c9c2c6c553bbbed67ba84891b4b1da). Yogi Studio raised a pre-seed and seed round. This fund will be used for future fundraising rounds to support Yogi Studio' operations and growth. YOGI tokens will never be sold to retail investors.
 
 The remaining 65M tokens are intended to be mostly distributed to liquidity providers in the coming years. 
 

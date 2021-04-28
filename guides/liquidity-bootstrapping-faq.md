@@ -78,7 +78,7 @@ If you are launching an LBP and want to make sure that your token is listed on t
 
 ### How do I get my token whitelisted for YOGI mining rewards?
 
-[This page](../protocol/bal-liquidity-mining/exchange-and-reward-listing.md) describes the process.
+[This page](../protocol/yogi-liquidity-mining/exchange-and-reward-listing.md) describes the process.
 
 ### After providing the initial seed capital needed to launch an LBP, do I need to deposit additional capital later?
 

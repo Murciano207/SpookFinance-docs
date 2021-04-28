@@ -36,9 +36,9 @@ This is to prevent malicious pool controllers from setting predatory trading fee
 
 The minimum balance of any token in a pool is 10^6 wei. **Important**: this is agnostic to token decimals and may cause issues for tokens with less than 6 decimals. Also note that this is only enforced on initial token binding. Future exits can potentially bring the pool below the minimum balance threshold and users should be aware of potential rounding errors.
 
-**Min/Max Initial BPT Supply - \(100 / 1 Billion\)**
+**Min/Max Initial YPT Supply - \(100 / 1 Billion\)**
 
-Core Yogi Pools have a fixed initial token supply of 100 \(i.e., BPTs that represent shares of the pool's liquidity\). Smart Pools allow the pool creator to specify an initial supply within these bounds.
+Core Yogi Pools have a fixed initial token supply of 100 \(i.e., YPTs that represent shares of the pool's liquidity\). Smart Pools allow the pool creator to specify an initial supply within these bounds.
 
 
 

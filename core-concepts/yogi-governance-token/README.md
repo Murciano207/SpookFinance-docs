@@ -1,10 +1,10 @@
 # YOGI Governance Token
 
-Since inception, our goal at Yogi Studio has been to decentralize and diversify governance of the [Yogi Protocol](http://yogi.fi/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Yogi Protocol Governance Token \(YOGI\).
+Since inception, our goal at Yogi Studio has been to decentralize and diversify governance of the [Yogi Protocol](https://yogi.fi/). We have looked into several approaches and designs, and have landed on an approach we are proud to share: the Yogi Protocol Governance Token \(YOGI\).
 
 We believe alignment between token holders and protocol stakeholders is crucial for successful decentralized governance. More explicitly, we believe YOGI tokens are the vehicle to drive alignment and participation in the protocol. YOGI tokens are not an investment; YOGI token holders should be people who interact with the protocol in some way, are committed to its future development, and want a seat at the governance table.
 
-### Yogi Most Important Stakeholders: Liquidity Providers <a id="6f3a"></a>
+### Yogi’s Most Important Stakeholders: Liquidity Providers
 
 The Yogi Protocol allows any BSC account to add liquidity in the form of tokens to existing Yogi pools, or even create their own pools.
 
@@ -12,7 +12,7 @@ Liquidity attracts traders, trading generates fees, and ultimately pool profitab
 
 Regardless of the venue, early liquidity providers take on more risk and opportunity cost: including contract risk, low initial pool profitability, etc. We believe that these protocol users should get to participate early on in deciding how the protocol evolves. Toward this end, Yogi Studio proposed and implemented the concept of liquidity mining, where Yogi governance tokens \(YOGIs\) are distributed to liquidity providers. See below for further details.
 
-### Future Yogi Versions and the Governance Token <a id="ffb5"></a>
+### Future Yogi Versions and the Governance Token
 
 YOGIs are a key way of decentralizing the governance of the protocol such that it remains resilient over time, and protected from the failure of any single stakeholder. Our governance needs to be as resilient as our technology infrastructure.
 
