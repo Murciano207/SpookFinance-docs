@@ -50,8 +50,6 @@ Note - these are current values, and may change until release.
 
 BEP20 compliance: pool tokens should generally be BEP20 compliant, though it is more flexible than V1 in some areas \(e.g., it does not check for `bools` for `transfer` and `transferFrom`**\).** There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
 
-ERC20 compliance: pool tokens should generally be ERC20 compliant, though it is more flexible than V1 in some areas \(e.g., it does not check for `bools` for `transfer` and `transferFrom`**\).** There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
-
 Tokens that have internal transfer fees or other non-standard balance updates may create unexpected arbitrage opportunities. Ex: DGX has both a demurrage and a transfer fee that will change a pool's balance compared to the internal accounting balance. These must be handled through special pool logic on V1, and are not supported on V2.
 
 **Minimum Bound Tokens - 2**
