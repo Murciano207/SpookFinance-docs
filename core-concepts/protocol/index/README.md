@@ -55,7 +55,7 @@ $$
 
 ### All-Asset Deposit/Withdrawal
 
-Anyone can be issued Balancer pool tokens \(provided the pool is finalized\) by depositing proportional amounts of each of the assets contained in the pool. So, for each token _k_ in the pool, the amounts of token _k_ –$$D_k$$– that need to be deposited for someone to get $$P_{issued}$$pool tokens are:
+Anyone can be issued Yogi pool tokens \(provided the pool is finalized\) by depositing proportional amounts of each of the assets contained in the pool. So, for each token _k_ in the pool, the amounts of token _k_ –$$D_k$$– that need to be deposited for someone to get $$P_{issued}$$pool tokens are:
 
 $$
 D_k = \left(\frac{P_{supply}+P_{issued}}{P_{supply}}-1\right) \cdot B_k
@@ -79,7 +79,7 @@ $$
 P_{issued} = P_{supply} \cdot \left(\left(1+\frac{A_t}{B_t}\right)^{W_t} -1\right)
 $$
 
-Since Balancer allows for depositing and withdrawing liquidity to Balancer pools using only one of the tokens present in the pool, this could be used to do the equivalent of a swap: provide liquidity depositing token A, and immediately withdraw that liquidity in token B. Therefore a swap fee has to be charged, proportional to the tokens that would need to be swapped for an all-asset deposit. 
+Since Yogi allows for depositing and withdrawing liquidity to Yogi pools using only one of the tokens present in the pool, this could be used to do the equivalent of a swap: provide liquidity depositing token A, and immediately withdraw that liquidity in token B. Therefore a swap fee has to be charged, proportional to the tokens that would need to be swapped for an all-asset deposit. 
 
 Another justification for charging a swap fee when a liquidity provider does a single-asset deposit is that they are getting a share of a pool that contains a basket of different assets. So what they are really doing is trading one of the pool assets \(the token _t_ being deposited\) for proportional shares of all the pool assets. 
 
@@ -121,9 +121,9 @@ $$
 A_t = B_t \cdot \left(1-\left(1-\frac{P_{redeemed}}{P_{supply}}\right)^\frac{1}{W_t}\right)\cdot \left(1-(1 - W_t)\cdot swapFee\right)
 $$
 
-If there were an exit fee, it would be taken from the amount of tokens redeemed $$P_{redeemed}$$but as mentioned above this fee is zero in the first version of Balancer.
+If there were an exit fee, it would be taken from the amount of tokens redeemed $$P_{redeemed}$$but as mentioned above this fee is zero in the first version of Yogi.
 
-Balancer also allows for a liquidity provider to choose a desired amount of token t, $$A_t$$, they would like to withdraw from the pool, and calculates the necessary amount of pool tokens required for that,$$P_{redeemed}$$. The formula without considering swap fees is:
+Yogi also allows for a liquidity provider to choose a desired amount of token t, $$A_t$$, they would like to withdraw from the pool, and calculates the necessary amount of pool tokens required for that,$$P_{redeemed}$$. The formula without considering swap fees is:
 
 $$
 P_{redeemed} = P_{supply} \cdot \left(1-\left(1-\frac{A_t}{B_t}\right)^{W_t} \right)

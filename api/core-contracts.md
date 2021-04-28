@@ -2,7 +2,7 @@
 
 ### Events
 
-`LOG_CALL` is an anonymous event which uses the function signature as the event signature. It is fired by all stateful functions. The following applies to Balancer Core pools. Smart Pools have similar events and modifiers.
+`LOG_CALL` is an anonymous event which uses the function signature as the event signature. It is fired by all stateful functions. The following applies to Yogi Core pools. Smart Pools have similar events and modifiers.
 
 ```text
 event LOG_CALL(
