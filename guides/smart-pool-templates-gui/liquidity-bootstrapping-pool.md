@@ -78,6 +78,3 @@ The controller function `updateWeight` changes weights directly - but not the pr
 
 Though most LBPs are two-token pools \(e.g., a project token and a single reserve currency, usually a stable coin\), it is possible to have three tokens, or more. For instance, a stable coin and WBNB, in addition to the project token.
 
-
-
-
