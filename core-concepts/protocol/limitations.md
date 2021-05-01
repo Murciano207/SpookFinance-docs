@@ -6,7 +6,7 @@ Yogi is meant to be a flexible and agnostic DeFi primitive. Due to constraints s
 
 **BEP20 Tokens**
 
-BEP20 compliance: pool tokens have to be BEP20 compliant. Bronze does not support BEP20 tokens that do not return `bools` for `transfer` and `transferFrom`. _\*\*_There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
+BEP20 compliance: pool tokens have to be BEP20 compliant. Bronze does not support BEP20 tokens that do not return `bools` for `transfer` and `transferFrom`. \_\*\*\_There are no upgrade mechanisms in the contracts to allow for token upgrades. Any upgrade will need to be manually coordinated and moved into new pools.
 
 Tokens that have internal transfer fees or other non-standard balance updates may create arbitrage opportunities. Ex: DGX has both a demurrage and a transfer fee that will change a pool's balance compared to the internal accounting balance
 
@@ -54,7 +54,7 @@ Tokens that have internal transfer fees or other non-standard balance updates ma
 
 **Minimum Bound Tokens - 2**
 
-Weighted and Stable pools must contain at least two tokens. 
+Weighted and Stable pools must contain at least two tokens.
 
 **Maximum Bound Tokens - 16**
 

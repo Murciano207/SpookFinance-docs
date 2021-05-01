@@ -4,5 +4,11 @@ description: Audits of the balance-core smart contracts
 
 # Audits
 
-Yogi is working on a complete full audits with CertiK. Links to the audit reports will be added below:
+### Slither
+
+{% embed url="https://slither.yogi.fi" %}
+
+### CertiK
+
+Yogi full platform audit is queued. ETA: End of June.
 

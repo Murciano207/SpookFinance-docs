@@ -20,11 +20,11 @@ We expect token holders to help guide the protocol to its fullest potential thro
 
 ## Token Supply and Distribution <a id="14a8"></a>
 
-The total supply of YOGI tokens will be capped at 100M. 
+The total supply of YOGI tokens will be capped at 100M.
 
 **20M** YOGI tokens were initially allocated to founders and team members, all subject to vesting periods.
 
-**5M** were allocated for the [Yogi IDO](https://bscscan.com/tx/0x6e8a43985fbb17b139d516ad8c28b03a90c9c2c6c553bbbed67ba84891b4b1da). It will take place shortly after Yogi is live. 
+**5M** were allocated for the [Yogi IDO](https://bscscan.com/tx/0x6e8a43985fbb17b139d516ad8c28b03a90c9c2c6c553bbbed67ba84891b4b1da). It will take place shortly after Yogi is live.
 
 **10M** were allocated for the [Yogi Ecosystem Fund](https://bscscan.com/tx/0x3648dcfff461e8d683cd0ce94cdb022af2e940437549ec1d256c5d878dd51424). This fund will be deployed to attract and incentivize strategic partners who will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
 
@@ -36,6 +36,7 @@ The remaining 50M tokens are intended to be mostly distributed to liquidity prov
 
 Every week 384,000 YOGIs, or approximately 20M per year, are distributed to liquidity providers.
 
-This high rate of supply inflation is meant to kickstart the distribution of governance rights of the protocol to those who earn it. 
+This high rate of supply inflation is meant to kickstart the distribution of governance rights of the protocol to those who earn it.
 
 The schedule of YOGI distribution over the next few years will be extensively discussed within the Yogi community, and will ultimately be decided by YOGI holders.
+
