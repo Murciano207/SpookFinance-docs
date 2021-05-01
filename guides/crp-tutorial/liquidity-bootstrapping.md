@@ -109,5 +109,5 @@ for (i = 0; i < blockRange; i++) {
 }
 ```
 
-There are many subtleties; for instance, you could implement a non-linear bootstrapping weight curve by calculating the weights off-chain and setting them directly. For a comprehensive set of tests that demonstrate all features of the Configurable Rights Pool, see our [GitHub](https://github.com/balancer-labs/configurable-rights-pool).
+There are many subtleties; for instance, you could implement a non-linear bootstrapping weight curve by calculating the weights off-chain and setting them directly. For a comprehensive set of tests that demonstrate all features of the Configurable Rights Pool, see our [GitHub](https://github.com/yogi-fi/yogi-crp).
 
