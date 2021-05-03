@@ -23,7 +23,7 @@ Legend**: required;** ~~not required;~~ _optional_
 
 Change cap is required, of course. You might also want to be able to control \(or at least influence\) trading through pausing or setting fees, but that is optional.
 
-The "cap" refers to the total supply of pool tokens. Recall that pool tokens are themselves ERC-20s, so this corresponds to the `totalSupply()`.
+The "cap" refers to the total supply of pool tokens. Recall that pool tokens are themselves BEP20s, so this corresponds to the `totalSupply()`.
 
 The cap is always there, but if the right is not enabled, it is always set to `MAX` \(i.e., unlimited\). If the right is enabled, the cap is set to the initial supply on `createPool()`. Immediately after creating the pool, no one can add liquidity \(including the controller\).
 

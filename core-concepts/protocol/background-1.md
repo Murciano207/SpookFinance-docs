@@ -24,7 +24,6 @@ Yogi is essentially a generalization of the constant product rule to pools conta
 
 [Decentralized Exchanges as Prediction Markets](https://www.reddit.com/r/ethereum/comments/55m04x/lets_run_onchain_decentralized_exchanges_the_way/)
 
-[Building a Decentralized Exchange in Ethereum](https://blog.gnosis.pm/building-a-decentralized-exchange-in-ethereum-eea4e7452d6e) \(Gnosis / Alan Lu\)
 
 [On Path Independence](https://vitalik.ca/general/2017/06/22/marketmakers.html) \(Vitalik Buterin\)
 

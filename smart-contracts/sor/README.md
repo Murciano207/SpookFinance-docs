@@ -14,7 +14,7 @@ Since there might be many Yogi pools that contain a given pair, trading only wit
 
 The ideal solution - in a world where there were no gas costs or gas limits - would be to trade with all pools available in the desired pair. The amount traded with each pool should move them all to the same new spot price. This would mean all pools would be in an arbitrage-free state, and no further value could be extracted by arbitrageurs \(which always comes at the expense of the trader\).
 
-As there are incremental gas costs associated with interacting with additional Yogi pools, the SOR ensures that any additional interactions are profitable; i.e., the profit obtained through trading with each new pool exceeds the associated gas cost. This is an optimization problem that depends on the gas fees paid to the Ethereum network: higher gas prices may cause the SOR to select fewer trading pools.
+As there are incremental gas costs associated with interacting with additional Yogi pools, the SOR ensures that any additional interactions are profitable; i.e., the profit obtained through trading with each new pool exceeds the associated gas cost. This is an optimization problem that depends on the gas fees paid to the BSC network: higher gas prices may cause the SOR to select fewer trading pools.
 
 ## How it works
 

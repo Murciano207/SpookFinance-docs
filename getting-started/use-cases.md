@@ -5,7 +5,7 @@ There are two categories of users who can benefit from the Yogi Protocol: liquid
 Anyone can be a liquidity provider. For example:
 
 * Portfolio managers, who want to have controlled exposure to different assets without complicated and expensive rebalancing 
-* Investors who have ERC20 tokens sitting idly in a wallet, and would like to put them to work earning passive income from fees 
+* Investors who have BEP20 tokens sitting idly in a wallet, and would like to put them to work earning passive income from fees 
 
 Traders can choose from a diverse set of pools, each presenting a unique set of investment opportunities and challenges through its particular configuration of tokens, weights, and fees. The interplay between these settings, pool volume, and external prices generates market forces which incentivize traders to maintain stable token ratios, thereby preserving asset value for liquidity providers.
 

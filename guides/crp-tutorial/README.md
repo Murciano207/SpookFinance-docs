@@ -31,9 +31,9 @@ struct PoolParams {
 }
 ```
 
-Since the Yogi Pool Tokens are themselves ERC20 tokens, they have symbols and names. You can set both when creating your pool.
+Since the Yogi Pool Tokens are themselves BEP20 tokens, they have symbols and names. You can set both when creating your pool.
 
-The tokens must be addresses of conforming ERC20 tokens. Balances and weights are expressed in Wei - and the weights are denormalized, not percentages. Valid denormalized weights range from 1 to 49, since the maximum total denormalized weight is 50. \(This corresponds to a percentage range from 2% to 98%: 1/\(1+49\) = 2%; 49/\(1+49\) = 98%\)
+The tokens must be addresses of conforming BEP20 tokens. Balances and weights are expressed in Wei - and the weights are denormalized, not percentages. Valid denormalized weights range from 1 to 49, since the maximum total denormalized weight is 50. \(This corresponds to a percentage range from 2% to 98%: 1/\(1+49\) = 2%; 49/\(1+49\) = 98%\)
 
 **Note that balances must be "normalized" for the number of decimals in the token. For instance, USDC has 6 decimals, so "10" is "10000000" - not "10000000000000000000"!**
 

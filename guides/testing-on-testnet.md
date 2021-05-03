@@ -166,7 +166,7 @@ seth send $BPOOL "finalize()"
 
 All done, now anyone can add liquidity and swap against the assets in the pool!
 
-Let's confirm that we received YPTs by calling `balanceOf` directly on the pool address \(since the pools themselves are ERC20 tokens\)
+Let's confirm that we received YPTs by calling `balanceOf` directly on the pool address \(since the pools themselves are BEP20 tokens\)
 
 ```text
 seth --from-wei $(seth --to-dec $(seth call $BPOOL "balanceOf(address)" $ETH_FROM))

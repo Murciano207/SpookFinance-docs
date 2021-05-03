@@ -46,7 +46,7 @@ You can enter any numbers you like in the weights field, though it's easiest to 
 
 #### Similar Pools
 
-Note the "similar pools" information block in the example above. If there are already pools with the same tokens with similar weights, it might be better to add liquidity to those instead of creating a new pool. We discourage having many similar pools, since it fragments liquidity and leads to higher slippage for traders. Large liquidity pools \(especially with relatively low fees\), provide the best experience for traders. It has also become quite expensive to deploy pools in this era of all-time high ETH and gas prices!
+Note the "similar pools" information block in the example above. If there are already pools with the same tokens with similar weights, it might be better to add liquidity to those instead of creating a new pool. We discourage having many similar pools, since it fragments liquidity and leads to higher slippage for traders. Large liquidity pools \(especially with relatively low fees\), provide the best experience for traders. It has also become quite expensive to deploy pools in this era of all-time high BNB and gas prices!
 
 #### Amounts entry
 
@@ -64,5 +64,5 @@ If the token you want to add is not listed on the token picker panel, you can ad
 
 ![](../.gitbook/assets/image%20%282%29.png)
 
-**IMPORTANT**: make sure that the custom token you are adding complies with the ERC20 standard. For example it has to allow 0 value transfers and the transfer function must return a boolean. You can check if the token you are adding is on any of these two lists that gather many tokens that are not ERC20-compliant:
+**IMPORTANT**: make sure that the custom token you are adding complies with the BEP20 standard. For example it has to allow 0 value transfers and the transfer function must return a boolean. You can check if the token you are adding is on any of these two lists that gather many tokens that are not BEP20-compliant:
 

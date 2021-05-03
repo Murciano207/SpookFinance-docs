@@ -16,7 +16,7 @@ Regardless of the venue, early liquidity providers take on more risk and opportu
 
 YOGIs are a key way of decentralizing the governance of the protocol such that it remains resilient over time, and protected from the failure of any single stakeholder. Our governance needs to be as resilient as our technology infrastructure.
 
-We expect token holders to help guide the protocol to its fullest potential through experimentation and active participation. For example, implementing new functionality, deploying the protocol on additional smart contract blockchains beyond Ethereum, using layer 2 solutions for scaling, introducing a protocol level fee, etc. Anything contentious will certainly go to the YOGI token holders for review.
+We expect token holders to help guide the protocol to its fullest potential through experimentation and active participation. For example, implementing new functionality, deploying the protocol on additional smart contract blockchains beyond BSC, using layer 2 solutions for scaling, introducing a protocol level fee, etc. Anything contentious will certainly go to the YOGI token holders for review.
 
 ## Token Supply and Distribution <a id="14a8"></a>
 
