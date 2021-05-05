@@ -18,7 +18,7 @@ YOGIs are a key way of decentralizing the governance of the protocol such that i
 
 We expect token holders to help guide the protocol to its fullest potential through experimentation and active participation. For example, implementing new functionality, deploying the protocol on additional smart contract blockchains beyond BSC, using layer 2 solutions for scaling, introducing a protocol level fee, etc. Anything contentious will certainly go to the YOGI token holders for review.
 
-## Token Supply and Distribution <a id="14a8"></a>
+## Token Supply and Distribution
 
 The total supply of YOGI tokens will be capped at 100M.
 
