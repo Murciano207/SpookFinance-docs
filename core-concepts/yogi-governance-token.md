@@ -40,3 +40,26 @@ This high rate of supply inflation is meant to kickstart the distribution of gov
 
 The schedule of YOGI distribution over the next few years will be extensively discussed within the Yogi community, and will ultimately be decided by YOGI holders.
 
+### Vesting contracts
+
+https://bscscan.com/address/0xa3516c5C241fEc1c4C63Ae36115fD018bB0dAa2f
+
+https://bscscan.com/address/0xe5569D65BdaD5acDD01aabA673FAAe85279DE963
+
+https://bscscan.com/address/0xc65776D5440EaC2dF0c838a2F4f50c09Cd4f9A9d
+
+https://bscscan.com/address/0x226EFDc8154B09c43A9c1cc2beCA22c312a44432
+
+https://bscscan.com/address/0x923d1d99Abf6e3De6346620E15a367b87C132EdD
+
+https://bscscan.com/address/0x5FF33e4c87a1343DF4059a5aF97833622841f2Db
+
+https://bscscan.com/address/0x95404F0544F6c51C2AE83a13082077e139cf9B27
+
+### Multisig
+
+https://bscscan.com/address/0x35C203d5fcC5c240aeD9387436b9184fc627e121
+
+### Timelock
+
+https://bscscan.com/address/0xA69adFE56d6bFfe429c475483C35Fe5bDfa93f5D
