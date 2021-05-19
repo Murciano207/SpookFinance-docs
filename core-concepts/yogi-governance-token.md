@@ -6,7 +6,7 @@ We believe alignment between token holders and protocol stakeholders is crucial 
 
 ## Yogi’s Most Important Stakeholders: Liquidity Providers
 
-The Yogi Protocol allows any BSC account to add liquidity in the form of tokens to existing Yogi pools, or even create their own pools.
+The Yogi Protocol allows any account to add liquidity in the form of tokens to existing Yogi pools, or even create their own pools.
 
 Liquidity attracts traders, trading generates fees, and ultimately pool profitability attracts more liquidity. This is a flywheel effect that we are beginning to see happen within the Yogi Protocol.
 
@@ -16,7 +16,7 @@ Regardless of the venue, early liquidity providers take on more risk and opportu
 
 YOGIs are a key way of decentralizing the governance of the protocol such that it remains resilient over time, and protected from the failure of any single stakeholder. Our governance needs to be as resilient as our technology infrastructure.
 
-We expect token holders to help guide the protocol to its fullest potential through experimentation and active participation. For example, implementing new functionality, deploying the protocol on additional smart contract blockchains beyond BSC, using layer 2 solutions for scaling, introducing a protocol level fee, etc. Anything contentious will certainly go to the YOGI token holders for review.
+We expect token holders to help guide the protocol to its fullest potential through experimentation and active participation. For example, implementing new functionality, deploying the protocol on additional smart contract blockchains beyond Polygon and BSC, using layer 2 solutions for scaling, introducing a protocol level fee, etc. Anything contentious will certainly go to the YOGI token holders for review.
 
 ## Token Supply and Distribution
 

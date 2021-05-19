@@ -53,7 +53,7 @@ Not currently. A token will never be required to trade or interact with the prot
 
 ### Is there a Yogi Governance Token?
 
-Yes, Yogi Governance Token, [YOGI](https://bscscan.com/address/0xa20FFbd8c1541E31145a9C8d34833fd4b2BC90e5), can be used to vote on proposals and steer the direction of the protocol. Every week 384,000 YOGIs, or approximately 20M per year, are distributed to liquidity providers. They are typically distributed directly to liquidity providers on Tuesdays at 2300 UTC.
+Yes, Yogi Governance Token, [YOGI](https://bscscan.com/address/0x88888C8783a88aD40d995073Ab7FBbe8d34aCdA8), can be used to vote on proposals and steer the direction of the protocol. Every week 384,000 YOGIs, or approximately 20M per year, are distributed to liquidity providers. They are typically distributed directly to liquidity providers on Tuesdays at 2300 UTC.
 
 * 20M YOGI tokens were initially allocated to founders, all subject to vesting periods.
 * 10M were allocated for the Yogi Ecosystem Fund. This fund will be deployed to attract and incentivize strategic partners that will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
