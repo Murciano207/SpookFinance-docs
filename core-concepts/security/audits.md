@@ -1,5 +1,5 @@
 ---
-description: Audits of the balance-core smart contracts
+description: Audits of the yogi-core smart contracts
 ---
 
 # Audits
