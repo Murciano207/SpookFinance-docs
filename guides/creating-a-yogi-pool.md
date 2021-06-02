@@ -49,7 +49,7 @@ If the token you want to add is not listed on the token picker panel, you can ad
 
 ![Select a token by address](../.gitbook/assets/image%20%282%29.png)
 
-**IMPORTANT**: make sure that the custom token you are adding complies with the BEP20 standard. For example it has to allow 0 value transfers and the transfer function must return a boolean. You can check if the token you are adding is on any of these two lists that gather many tokens that are not BEP20-compliant:
+**IMPORTANT**: make sure that the custom token you are adding complies with the ERC20 standard. For example it has to allow 0 value transfers and the transfer function must return a boolean. You can check if the token you are adding is on any of these two lists that gather many tokens that are not ERC20-compliant:
 
 {% embed url="https://medium.com/coinmonks/missing-return-value-bug-at-least-130-tokens-affected-d67bf08521ca" caption="" %}
 

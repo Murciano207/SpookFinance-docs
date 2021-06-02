@@ -20,17 +20,15 @@ We expect token holders to help guide the protocol to its fullest potential thro
 
 ## Token Supply and Distribution
 
-The total supply of YOGI tokens will be capped at 100M.
+The total supply of YOGI tokens will be capped at 100M. 50M on BSC, 50M on Polygon.
 
 **20M** YOGI tokens were initially allocated to founders and team members, all subject to vesting periods.
 
-**5M** were allocated for the [Yogi IDO](https://bscscan.com/tx/0x6e8a43985fbb17b139d516ad8c28b03a90c9c2c6c553bbbed67ba84891b4b1da). It will take place shortly after Yogi is live.
+**10M** were allocated for the *Yogi IDO*. It will take place shortly after Yogi is live. Unsold tokens will be returned to the timelock and the community will decide how to allocate them.
 
-**10M** were allocated for the [Yogi Ecosystem Fund](https://bscscan.com/tx/0x3648dcfff461e8d683cd0ce94cdb022af2e940437549ec1d256c5d878dd51424). This fund will be deployed to attract and incentivize strategic partners who will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
+**10M** were allocated for the *Yogi Ecosystem Fund*. This fund will be deployed to attract and incentivize strategic partners who will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
 
 **10M** were allocated to incentivize future contributors and developers that will help shape the future of Yogi.
-
-**5M** were allocated for the [Fundraising Fund](https://bscscan.com/tx/0x3648dcfff461e8d683cd0ce94cdb022af2e940437549ec1d256c5d878dd51424). This fund will be used for future fundraising rounds to support Yogi Studio' operations and growth. YOGI tokens will never be sold to retail investors.
 
 The remaining 50M tokens are intended to be mostly distributed to liquidity providers in the coming years.
 
@@ -40,26 +38,42 @@ This high rate of supply inflation is meant to kickstart the distribution of gov
 
 The schedule of YOGI distribution over the next few years will be extensively discussed within the Yogi community, and will ultimately be decided by YOGI holders.
 
-### Vesting contracts
+### BSC Vesting contracts
 
-https://bscscan.com/address/0xa3516c5C241fEc1c4C63Ae36115fD018bB0dAa2f
+https://bscscan.com/address/0xf795cbC0Dc5846Ae091D6C9d1fE4830cb81d9116
 
-https://bscscan.com/address/0xe5569D65BdaD5acDD01aabA673FAAe85279DE963
+https://bscscan.com/address/0x8feCc2b2AA41D7B24Bd6519b37E7fcd35c2C3052 
 
-https://bscscan.com/address/0xc65776D5440EaC2dF0c838a2F4f50c09Cd4f9A9d
+https://bscscan.com/address/0x3479818e46Cb5dCd77639Eb0839eBaeE89eDD718 
 
-https://bscscan.com/address/0x226EFDc8154B09c43A9c1cc2beCA22c312a44432
+https://bscscan.com/address/0x1C79BF6a66ae99566641eB59028c08677944fcAc 
 
-https://bscscan.com/address/0x923d1d99Abf6e3De6346620E15a367b87C132EdD
+https://bscscan.com/address/0xa518E62FE77094b1B370E2cBA5b872f088F6DFA2
 
-https://bscscan.com/address/0x5FF33e4c87a1343DF4059a5aF97833622841f2Db
+https://bscscan.com/address/0xAE3294B02d99fBA3633B4398B745Cf76f2696aAD 
 
-https://bscscan.com/address/0x95404F0544F6c51C2AE83a13082077e139cf9B27
+### BSC Multisig
 
-### Multisig
+https://bscscan.com/address/0x1BA2571669048137665306b1e848b6e80E6F3C75
 
-https://bscscan.com/address/0x35C203d5fcC5c240aeD9387436b9184fc627e121
+### BSC Timelock
 
-### Timelock
+https://bscscan.com/address/0x00B0CaBD76fe5913D6CDF1d3A216b808B118F06d
 
-https://bscscan.com/address/0xA69adFE56d6bFfe429c475483C35Fe5bDfa93f5D
+### Polygon Vesting contracts
+
+https://explorer.matic.network/address/0xf795cbC0Dc5846Ae091D6C9d1fE4830cb81d9116
+
+https://explorer.matic.network/address/0x8feCc2b2AA41D7B24Bd6519b37E7fcd35c2C3052 
+
+https://explorer.matic.network/address/0x3479818e46Cb5dCd77639Eb0839eBaeE89eDD718 
+
+https://explorer.matic.network/address/0x1C79BF6a66ae99566641eB59028c08677944fcAc 
+
+https://explorer.matic.network/address/0xa518E62FE77094b1B370E2cBA5b872f088F6DFA2
+
+https://explorer.matic.network/address/0xAE3294B02d99fBA3633B4398B745Cf76f2696aAD 
+
+### Polygon Timelock
+
+https://explorer.matic.network/address/0x00B0CaBD76fe5913D6CDF1d3A216b808B118F06d

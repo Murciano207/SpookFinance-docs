@@ -80,5 +80,5 @@ Please report any findings to [yogi.fi@protonmail.com](mailto:yogi.fi@protonmail
 
 * Duplicate vulnerabilities. Only the first reporter will be rewarded.
 * Findings already known as part of a formal audit.
-* Findings related to non-standard BEP20 tokens might be ineligible as many vulnerabilities might be inserted in non-standard BEP20 tokens on purpose for applying for this bug bounty. 
+* Findings related to non-standard ERC20 tokens might be ineligible as many vulnerabilities might be inserted in non-standard ERC20 tokens on purpose for applying for this bug bounty. 
 

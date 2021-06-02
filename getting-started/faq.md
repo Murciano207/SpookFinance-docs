@@ -10,10 +10,10 @@ Yogi is a protocol for multi-token [automated market-making](../core-concepts/pr
 
 There are two categories of users who can benefit from the Yogi Protocol: liquidity providers - who own Yogi Pools or participate in shared pools, and traders - who buy or sell the underlying pool assets on the open market.
 
-Anyone with two or more BEP20 tokens can be a liquidity provider. For example:
+Anyone with two or more ERC20 tokens can be a liquidity provider. For example:
 
 * Portfolio managers, who want to have controlled exposure to different assets without complicated and expensive rebalancing 
-* Investors who have BEP20 tokens sitting idly in a wallet, and would like to put them to work earning passive income from fees 
+* Investors who have ERC20 tokens sitting idly in a wallet, and would like to put them to work earning passive income from fees 
 
 Traders can choose from a diverse set of pools, each presenting a unique set of investment opportunities and challenges through its particular configuration of tokens, weights, and fees. The interplay between these settings, pool volume, and external prices generates market forces which incentivize traders to maintain stable token ratios, thereby preserving asset value for liquidity providers.
 
@@ -27,7 +27,7 @@ There are three main categories:
 
 Yes. Yogi Pools cannot be censored or whitelisted. Traders cannot be censored or whitelisted. Yogi Studio does not have the power to halt or edit the smart contracts in any way after they’ve been deployed. The contracts are not upgradeable, and there is no admin functionality or "backdoor" present in the code.
 
-Of course, Yogi has no control over the contracts of BEP20 tokens placed in Yogi pools. If a centralized token \(e.g., USDC\) were to blacklist an address or freeze all transfers, that would affect all USDC tokens everywhere, including those in Yogi Pools.
+Of course, Yogi has no control over the contracts of ERC20 tokens placed in Yogi pools. If a centralized token \(e.g., USDC\) were to blacklist an address or freeze all transfers, that would affect all USDC tokens everywhere, including those in Yogi Pools.
 
 ### What is the development roadmap?
 
@@ -53,20 +53,19 @@ Not currently. A token will never be required to trade or interact with the prot
 
 ### Is there a Yogi Governance Token?
 
-Yes, Yogi Governance Token, [YOGI](https://bscscan.com/address/0x88888C8783a88aD40d995073Ab7FBbe8d34aCdA8), can be used to vote on proposals and steer the direction of the protocol. Every week 384,000 YOGIs, or approximately 20M per year, are distributed to liquidity providers. They are typically distributed directly to liquidity providers on Tuesdays at 2300 UTC.
+Yes, Yogi Governance Token, [YOGI](https://bscscan.com/address/0x88888C8783a88aD40d995073Ab7FBbe8d34aCdA8), can be used to vote on proposals and steer the direction of the protocol. Every week 384,000 YOGIs, or approximately 20M per year, are distributed to liquidity providers.
 
 * 20M YOGI tokens were initially allocated to founders, all subject to vesting periods.
 * 10M were allocated for the Yogi Ecosystem Fund. This fund will be deployed to attract and incentivize strategic partners that will help the Yogi ecosystem grow and thrive. YOGI holders will ultimately decide how this fund is used over the coming years.
 * 10M were allocated for community contributors to help create and raise awareness of Yogi.
-* 5M were allocated for the IDO of Yogi.
-* 5M were allocated for the Fundraising Fund. This fund will be used for future fundraising rounds to support Yogi Studio operations and growth. YOGI tokens will never be sold to retail investors.
+* 10M were allocated for the IDO of Yogi.
 * The remaining 50M tokens are intended to be mostly distributed to liquidity providers in the coming years.
 
 ## Yogi Pools
 
 ### What is a Yogi Pool?
 
-The fundamental building block of the Yogi Protocol is the Yogi Pool. Pools are smart contracts that implement the Yogi Protocol, and hold value in two or more BEP20 tokens.
+The fundamental building block of the Yogi Protocol is the Yogi Pool. Pools are smart contracts that implement the Yogi Protocol, and hold value in two or more ERC20 tokens.
 
 You can think of a Yogi Pool as an automated, market-making portfolio. Each token asset has an independent weight, and can be traded against any other token in the pool. For example, you could have a pool with three tokens in the following proportions 50% WBNB, 25% BTC and 25% BUSD.
 
@@ -83,7 +82,7 @@ Only a few. Yogi Protocol limits pools in the following ways:
 
 * Number of tokens: pools must contain at least two, and may contain up to eight tokens on V1 \(16 on V2 Weighted pools\).
 * Swap fee: the fee must be between 0.0001% and 10% 
-* BEP20 compliance: pool tokens must be BEP20 compliant. Bronze does not support BEP20 tokens that do not return `bools` for `transfer` and `transferFrom`. V2 is a bit more flexible, but will not support some token types, such as tokens that change balances \(e.g., elastic supply tokens\).
+* ERC20 compliance: pool tokens must be ERC20 compliant. Bronze does not support ERC20 tokens that do not return `bools` for `transfer` and `transferFrom`. V2 is a bit more flexible, but will not support some token types, such as tokens that change balances \(e.g., elastic supply tokens\).
 * There are a few additional ratio and balance constraints that can be found at [Limitations](../core-concepts/protocol/limitations.md).
 
 ### How are Yogi Pools continuously rebalanced?
@@ -108,7 +107,7 @@ There are also various kinds of Smart Pools - Core Yogi Pools controlled by a sm
 
 Some Smart Pool concepts have already been implemented, and many more are in development. The first implementation was actually [PieDAO](https://piedao.org/).
 
-Since Yogi Pool tokens are also compliant BEP20 tokens, they can also be composed into "meta" pools.
+Since Yogi Pool tokens are also compliant ERC20 tokens, they can also be composed into "meta" pools.
 
 The home-grown "Configurable Rights" Smart Pool is less trustless than a Core Yogi Pool, since Smart Pool creators can \(by definition\) alter the parameters of a "live" Yogi Pool that allows public LPs. To mitigate this, CRP creators can choose exactly which parameters can be changed, at create time. As the name implies, this is done by granting the Smart Pool contract one or more "Rights" - the right to change one of the parameters. \(A CRP with no rights would be equivalent to a Core Yogi Pool.\)
 
@@ -148,9 +147,9 @@ Yogi Protocol smart contracts have been designed with security as a top priority
 
 Yogi Pools are not [upgradeable](https://medium.com/consensys-diligence/upgradeability-is-a-bug-dba0203152ce) \(though other third-party Smart Pool implementations might be\), and there are no admin keys or backdoors.
 
-Remember that the tokens held in Yogi Pools are also smart contracts - not controlled by Yogi - and may have their own risks. Yogi does not support non-BEP20-conforming tokens, but pools may have been created that use them anyway.
+Remember that the tokens held in Yogi Pools are also smart contracts - not controlled by Yogi - and may have their own risks. Yogi does not support non-ERC20-conforming tokens, but pools may have been created that use them anyway.
 
-The CRP contains safeguards to prevent categories of tokens with known issues from being used in pools \(e.g., non BEP20-conforming tokens, and tokens that disallow zero-transfers\), and further safeguards to allow other kinds of tokens to interact safely with the protocol \(e.g., tokens with callbacks, or those which require 0 prior spend approval\).
+The CRP contains safeguards to prevent categories of tokens with known issues from being used in pools \(e.g., non ERC20-conforming tokens, and tokens that disallow zero-transfers\), and further safeguards to allow other kinds of tokens to interact safely with the protocol \(e.g., tokens with callbacks, or those which require 0 prior spend approval\).
 
 Since Smart Pool operators can, by definition, alter the parameters of the pool during active trading, all require some level of trust in the pool creators \(beyond the general smart contract risk\) - the more parameters they can change, the more trust is required.
 

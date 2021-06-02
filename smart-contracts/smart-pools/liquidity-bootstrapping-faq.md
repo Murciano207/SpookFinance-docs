@@ -95,7 +95,7 @@ For instance, if you started at 24/1, and ended at 15/35, the percentages work o
 
 ## What are the reserve assets I can sell my token for?
 
-You can sell your token for any BEP20 tokens. You can choose up to 7 other tokens to be used as reserve assets in your LBP token sale. Projects typically sell their tokens for highly liquid stablecoins such as DAI or USDC; and/or for WETH.
+You can sell your token for any ERC20 tokens. You can choose up to 7 other tokens to be used as reserve assets in your LBP token sale. Projects typically sell their tokens for highly liquid stablecoins such as DAI or USDC; and/or for WETH.
 
 ## How do I get my token listed by name and logo on the Yogi exchange UI?
 
