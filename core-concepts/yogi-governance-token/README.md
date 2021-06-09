@@ -62,18 +62,18 @@ https://bscscan.com/address/0x00B0CaBD76fe5913D6CDF1d3A216b808B118F06d
 
 ### Polygon Vesting contracts
 
-https://explorer.matic.network/address/0xf795cbC0Dc5846Ae091D6C9d1fE4830cb81d9116
+https://polygonscan.com/address/0xf795cbC0Dc5846Ae091D6C9d1fE4830cb81d9116
 
-https://explorer.matic.network/address/0x8feCc2b2AA41D7B24Bd6519b37E7fcd35c2C3052 
+https://polygonscan.com/address/0x8feCc2b2AA41D7B24Bd6519b37E7fcd35c2C3052 
 
-https://explorer.matic.network/address/0x3479818e46Cb5dCd77639Eb0839eBaeE89eDD718 
+https://polygonscan.com/address/0x3479818e46Cb5dCd77639Eb0839eBaeE89eDD718 
 
-https://explorer.matic.network/address/0x1C79BF6a66ae99566641eB59028c08677944fcAc 
+https://polygonscan.com/address/0x1C79BF6a66ae99566641eB59028c08677944fcAc 
 
-https://explorer.matic.network/address/0xa518E62FE77094b1B370E2cBA5b872f088F6DFA2
+https://polygonscan.com/address/0xa518E62FE77094b1B370E2cBA5b872f088F6DFA2
 
-https://explorer.matic.network/address/0xAE3294B02d99fBA3633B4398B745Cf76f2696aAD 
+https://polygonscan.com/address/0xAE3294B02d99fBA3633B4398B745Cf76f2696aAD 
 
 ### Polygon Timelock
 
-https://explorer.matic.network/address/0x00B0CaBD76fe5913D6CDF1d3A216b808B118F06d
+https://polygonscan.com/address/0x00B0CaBD76fe5913D6CDF1d3A216b808B118F06d
